@@ -1,0 +1,117 @@
+[
+ {
+  "id": "dos_lagunas_escondida_toro",
+  "name": "Monumento Natural Dos Lagunas: Laguna Escondida and El Toro circuit",
+  "area": "Coyhaique-east",
+  "dist": "≈6 km return",
+  "gain": "≈200 m",
+  "time": "2–3 h",
+  "sac": "T1",
+  "kind": "day",
+  "nights": 0,
+  "hazards": [],
+  "note": "Short wetland and lake walk in a small protected monument east of Coyhaique, near the Paso Coyhaique road. Trails go to Laguna El Toro and along the north shore of Laguna Escondida. Distance, fee and road details are unverified, so check with CONAF before going.",
+  "pts": [
+   [
+    -45.5294,
+    -71.8394
+   ],
+   [
+    -45.5297,
+    -71.8535
+   ]
+  ],
+  "camps": [],
+  "verdict": "MAYBE",
+  "conf": "low-medium"
+ },
+ {
+  "id": "cerro_mackay_summit",
+  "name": "Cerro Mackay summit",
+  "area": "Coyhaique-south",
+  "dist": "≈12 km return",
+  "gain": "≈900 m",
+  "time": "5–7 h",
+  "sac": "T3",
+  "kind": "day",
+  "nights": 0,
+  "hazards": [
+   "navigation",
+   "steep-loose"
+  ],
+  "note": "Unofficial summit route above Coyhaique, reached by a forest road and then a ribbon-marked path. Komoot users say to keep left of the ravine; the stored track ends at a rock face. Turn back if it looks like scrambling. The trailhead coordinate is the peak only and is not verified.",
+  "pts": [
+   [
+    -45.59,
+    -72.07
+   ],
+   [
+    -45.6079,
+    -72.0752
+   ]
+  ],
+  "camps": [],
+  "verdict": "MAYBE",
+  "conf": "low"
+ },
+ {
+  "id": "lago_pollux_frio_steppe",
+  "name": "Lago Pollux and Lago Frío steppe lakes",
+  "area": "Coyhaique-southeast",
+  "dist": "≈10 km return",
+  "gain": "≈200 m",
+  "time": "3–4 h",
+  "sac": "T2",
+  "kind": "day",
+  "nights": 0,
+  "hazards": [
+   "navigation",
+   "private-land"
+  ],
+  "note": "Open steppe walk around two lakes reached by gravel road. No marked trail was found, and fences or private land are likely, so check access first. Wild car camping may be possible. Coordinates are Nominatim matches for the lakes, with no confirmed trailhead.",
+  "pts": [
+   [
+    -45.6633,
+    -71.8369
+   ],
+   [
+    -45.6753,
+    -71.8589
+   ]
+  ],
+  "camps": [],
+  "verdict": "MAYBE",
+  "conf": "low"
+ },
+ {
+  "id": "coy_laguna_verde_camp",
+  "name": "RN Coyhaique: night at Laguna Verde campground",
+  "area": "Coyhaique",
+  "dist": "≈8 km return over 2 days",
+  "gain": "≈250 m",
+  "time": "1.5 h each way",
+  "sac": "T2",
+  "kind": "overnight",
+  "nights": 1,
+  "hazards": [],
+  "note": "Walk about 3.9 km to the rustic CONAF campground at Laguna Verde and back the next day. It overlaps the catalogue's coy loop. The reserve is closed on Mondays and is booked via pasesparques.cl. Camping fee and booking are unverified.",
+  "pts": [
+   [
+    -45.5365,
+    -72.0165
+   ],
+   [
+    -45.5356,
+    -72.014
+   ]
+  ],
+  "camps": [
+   [
+    -45.5356,
+    -72.014
+   ]
+  ],
+  "verdict": "MAYBE",
+  "conf": "low-medium"
+ }
+]

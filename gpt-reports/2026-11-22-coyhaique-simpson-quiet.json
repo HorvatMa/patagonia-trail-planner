@@ -1,0 +1,56 @@
+[
+ {
+  "id": "coy_cinchao_full",
+  "name": "RN Coyhaique: full Cerro Cinchao loop via Laguna Verde",
+  "kind": "day",
+  "verdict": "ADD*",
+  "conf": "medium-low",
+  "area": "Coyhaique",
+  "ref": "none (not in GPT30H detail; web only)",
+  "dist": "≈17–21 km",
+  "gain": "≈950–1,000 m",
+  "time": "6–8 h",
+  "terrain": "Forest trail through lenga and coigüe to the summit (1,361 m). SAC T2 (possibly T3 at the top). Hazards: navigation, steep-loose",
+  "cost": "CONAF fee via pasesparques.cl (price not shown, no refunds); Tue–Sun 09:00–16:30, last entry 14:00",
+  "caution": "Closed Mondays. Last entry 14:00. Confirm route and trail state at the ranger post. Distance and gain from Wikiloc snippets only.",
+  "why": "The real full-day hike behind the short coy loop, ten minutes from town; quiet above Laguna Verde.",
+  "pts": [
+   [
+    -45.5365,
+    -72.0165
+   ],
+   [
+    -45.5148,
+    -72.0289
+   ]
+  ],
+  "fits": {}
+ },
+ {
+  "id": "dos_lagunas_walks",
+  "name": "Monumento Natural Dos Lagunas: Laguna Escondida and El Toro walks",
+  "kind": "day",
+  "verdict": "MAYBE",
+  "conf": "medium-low",
+  "area": "Coyhaique-east",
+  "ref": "none (web only)",
+  "dist": "≈6 km",
+  "gain": "≈200 m",
+  "time": "2–3 h",
+  "terrain": "Easy lake and wetland trails. SAC T1",
+  "cost": "CONAF fee via pasesparques.cl; Tue–Sun 09:00–17:00, last entry 15:30",
+  "caution": "Opening days conflict between sources. Trail length estimated.",
+  "why": "Quiet half-day filler near Coyhaique.",
+  "pts": [
+   [
+    -45.5294,
+    -71.8394
+   ],
+   [
+    -45.5297,
+    -71.8535
+   ]
+  ],
+  "fits": {}
+ }
+]

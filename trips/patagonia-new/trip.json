@@ -1,0 +1,62 @@
+{
+  "id": "patagonia-new",
+  "title": "Patagonia off the beaten path",
+  "short_title": "Patagonia 2027 (quiet)",
+  "start_date": "2027-01-27",
+  "end_date": "2027-02-21",
+  "people": 2,
+  "home": "Zagreb",
+  "international_airport": "SCL",
+  "car": {
+    "pickup": "BBA",
+    "dropoff": "BBA",
+    "type": "4x4",
+    "argentina_allowed": true
+  },
+  "sleeping": "car (tent on one-night trips)",
+  "budget": {
+    "currency": "EUR",
+    "max_per_person": 1500,
+    "prefer_cheaper": true,
+    "covers": "food, fuel, campgrounds, park fees, ferries (not flights or the car)"
+  },
+  "guided_trips": "avoid (mention only really worthwhile ones, marked optional)",
+  "hiking": {
+    "max_sac": "T3",
+    "day_hike_max_km": 25,
+    "day_hike_max_ascent_m": 1300,
+    "max_ford": "knee",
+    "excluded_hazards": [
+      "exposure",
+      "scramble",
+      "glacier",
+      "tyrolean",
+      "packraft",
+      "ford-deep"
+    ],
+    "cross_country": "easy open terrain only",
+    "overnight_trips": {
+      "min": 0,
+      "max": 2,
+      "note": "optional; tent carried in, one night, out the next day"
+    },
+    "multiday_treks": {
+      "min": 0,
+      "max": 0,
+      "max_days": 0
+    },
+    "flex_days_min": 3
+  },
+  "browser": "firefox",
+  "output_dir": "trips/patagonia-new/site",
+  "arrival_note": "Jan 26: depart Zagreb. Jan 27: land in Santiago and fly on to Balmaceda the same day. Feb 21: fly out of Balmaceda (a morning or midday flight), and fly home on Feb 22.",
+  "footer_note": "Made for Jan 26 – Feb 22, 2027.",
+  "lede": "Alternative plans for Jan 27 – Feb 21 2027 from Balmaceda that favour quiet, less-visited valleys and parks over the famous highlights, with up to two optional one-night tent trips. Most plans avoid the busiest places entirely; one mixes in a few highlights for comparison, and the plans differ in how much long gravel driving they accept.",
+  "preferences": {
+    "crowds": "prefer places that are not touristy; plans that avoid the famous highlights entirely (El Chaltén/Fitz Roy, Cerro Castillo main trail, Capillas de Mármol, Laguna San Rafael tours), plus exactly one plan that mixes a few highlights in",
+    "long_gravel_drives": "at least one plan with long gravel drives (e.g. Paso Roballos, Lago Verde, Raúl Marín Balmaceda back roads) and at least one plan without them",
+    "less_marked_trails": "ok (GPS navigation, still within max_sac and easy cross-country only)",
+    "remote_wild_camping": "ok (car nights away from campgrounds and towns)",
+    "private_land": "avoid hikes that need landowner permission"
+  }
+}

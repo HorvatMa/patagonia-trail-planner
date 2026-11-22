@@ -1,0 +1,56 @@
+[
+ {
+  "id": "las_horquetas_rio_turbio_overnight",
+  "name": "Las Horquetas to Camping Río Turbio (one night, out and back)",
+  "kind": "overnight",
+  "verdict": "ADD*",
+  "conf": "medium-low",
+  "area": "Cerro Castillo (Las Horquetas entrance)",
+  "ref": "GPT32 circuit stage / Wikiexplora Trekking Cerro Castillo; manual p.742, p.1229",
+  "dist": "about 31 km total, about 15-17 km each way",
+  "gain": "[estimate] 500-700 m per day",
+  "time": "5-7 h each way",
+  "terrain": "4x4 track, then marked trail in lenga forest and pastures; 5 unbridged streams (sometimes knee deep); gates with ladders; no exposure",
+  "cost": "park ticket about 16,000 CLP (2024) to about 21,000 CLP; camping at CONAF site Río Turbio; no other fees known",
+  "caution": "confirm out-and-back is allowed and the 2026/27 ticket; knee-deep fords are borderline (turn back if above the knee); trailhead pin approximate; entrance 07:00-13:00",
+  "why": "quiet end of the Cerro Castillo park, an official overnight spot, avoids the busy Laguna trail",
+  "pts": [
+   [
+    -45.9805,
+    -71.9554
+   ],
+   [
+    -45.982,
+    -72.122
+   ]
+  ],
+  "fits": {}
+ },
+ {
+  "id": "laguna_chiguay_loop",
+  "name": "Sendero Laguna Chiguay (4 km loop)",
+  "kind": "day",
+  "verdict": "MAYBE",
+  "conf": "medium",
+  "area": "Cerro Castillo park, Carretera Austral",
+  "ref": "none (park trail); rutadelosparques.org",
+  "dist": "4 km",
+  "gain": "under 100 m [estimate]",
+  "time": "1.5 h",
+  "terrain": "easy forest and lagoon path, T1",
+  "cost": "ranger-post pass (amount unconfirmed)",
+  "caution": "short filler only; the ranger post is also where Las Horquetas tickets are sold",
+  "why": "easy stretch-your-legs stop on a driving day",
+  "pts": [
+   [
+    -45.9838,
+    -71.8765
+   ],
+   [
+    -45.9838,
+    -71.8765
+   ]
+  ],
+  "fits": {}
+ }
+]

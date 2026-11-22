@@ -1,0 +1,83 @@
+[
+ {
+  "id": "mirador_laguna_calluqueo",
+  "name": "Mirador Laguna Calluqueo (drive-up viewpoint, Cochrane)",
+  "kind": "day",
+  "verdict": "ADD*",
+  "conf": "medium",
+  "area": "Cochrane",
+  "ref": "GPT36H km 50 (manual p. 418)",
+  "dist": "1-3 km",
+  "gain": "<100 m",
+  "time": "1 h walk, 3 h driving return from Cochrane",
+  "terrain": "Good gravel road, short walk to viewpoint; no glacier trail",
+  "cost": "free",
+  "caution": "private-land gate beyond the mirador; do not continue to the glacier front (Río Pedregoso ford, exposed traverse)",
+  "why": "Free view of Monte San Lorenzo and the Calluqueo glacier without a tour",
+  "pts": [
+   [
+    -47.597,
+    -72.497
+   ],
+   [
+    -47.5972,
+    -72.4972
+   ]
+  ],
+  "fits": {}
+ },
+ {
+  "id": "laguna_esmeralda_cochrane",
+  "name": "Laguna Esmeralda (Cochrane, short stop)",
+  "kind": "day",
+  "verdict": "MAYBE",
+  "conf": "low",
+  "area": "Cochrane",
+  "ref": "none",
+  "dist": "1-3 km",
+  "gain": "<50 m",
+  "time": "1 h",
+  "terrain": "Lake shore and picnic site; T1",
+  "cost": "free",
+  "caution": "no trail details found; stop only, not a hike day",
+  "why": "Free blue lake on the road to the Calluqueo valley",
+  "pts": [
+   [
+    -47.3217,
+    -72.6
+   ],
+   [
+    -47.3217,
+    -72.6
+   ]
+  ],
+  "fits": {}
+ },
+ {
+  "id": "refugio_toni_rohrer",
+  "name": "Refugio Toni Röhrer, Monte San Lorenzo (one night)",
+  "kind": "overnight",
+  "verdict": "MAYBE",
+  "conf": "low",
+  "area": "Cochrane",
+  "ref": "wikiexplora GPT36H (no manual pages)",
+  "dist": "about 19 km return",
+  "gain": "about 325 m each way",
+  "time": "2-3 h each way, 2.5 h drive from Cochrane",
+  "terrain": "Trail with a stream crossing; poor last stretch of road; stop below Paso del Comedor",
+  "cost": "hut about 7,000 CLP per person (Mar 2025)",
+  "caution": "private-land, ford; road condition and ford for cars unconfirmed; no 2026 information",
+  "why": "Almost no visitors; the Chilean side of Monte San Lorenzo",
+  "pts": [
+   [
+    -47.5181,
+    -72.3158
+   ],
+   [
+    -47.5181,
+    -72.3158
+   ]
+  ],
+  "fits": {}
+ }
+]

@@ -373,7 +373,7 @@ h3{font-size:17px;margin:0 0 6px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media (max-width:720px){.grid2{grid-template-columns:1fr}}
 ul.clean{margin:6px 0 0;padding-left:20px}
-ul.clean li{margin:4px 0}
+ul.clean li{margin:4px 0;overflow-wrap:anywhere}
 .days{display:flex;flex-direction:column;gap:8px}
 .day{display:grid;grid-template-columns:92px 1fr;gap:14px;background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--k);border-radius:10px;padding:12px 16px}
 .day .date{font-variant-numeric:tabular-nums}
@@ -530,7 +530,7 @@ def budget_html(p):
     verdict = (f"≈€{pp} per person, well under your €{mx:,}-per-person maximum." if pp <= 0.8 * mx else
                f"≈€{pp} per person, close to your €{mx:,} maximum." if pp <= mx else
                f"≈€{pp} per person: OVER your €{mx:,}-per-person maximum.")
-    rows = [("Food (self-catering, cooking in camp)", f), (f"Fuel (≈{p['km']} km, a diesel 4x4 using ≈10 L/100 km)", fu),
+    rows = [("Food (self-catering, cooking in camp)", f), (f"Fuel (≈{p['km'].lstrip('≈')} km, a diesel 4x4 using ≈10 L/100 km)", fu),
             ("Campgrounds (some free nights)", sl), ("Park and trail fees, ferries", fe), ("Miscellaneous: gas canisters, showers, laundry, SIM card", mi)]
     tr = "".join(f"<tr><td>{esc(a)}</td><td style='text-align:right'>€{b}</td></tr>" for a, b in rows)
     return f"""<h2>Budget estimate ({PEOPLE} people)</h2>

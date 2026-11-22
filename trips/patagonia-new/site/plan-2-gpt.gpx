@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="patagonia-plans" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata><name>Plan 2 GPT options</name></metadata>
+<wpt lat="-45.9805" lon="-71.9554"><name>GPT: Las Horquetas to Camping Río Turbio (one night, out and back) (start)</name><desc>about 31 km total, about 15-17 km each way, 500-700 m per day | ADD*</desc></wpt>
+<wpt lat="-45.982" lon="-72.122"><name>GPT: Las Horquetas to Camping Río Turbio (one night, out and back)</name><desc>about 31 km total, about 15-17 km each way, 500-700 m per day | ADD*</desc></wpt>
+<trk><name>GPT: Las Horquetas to Camping Río Turbio (one night, out and back) (approximate)</name><trkseg><trkpt lat="-45.9805" lon="-71.9554"/><trkpt lat="-45.982" lon="-72.122"/></trkseg></trk>
+<wpt lat="-45.9838" lon="-71.8765"><name>GPT: Sendero Laguna Chiguay (4 km loop)</name><desc>4 km, under 100 m | MAYBE</desc></wpt>
+<wpt lat="-46.8502" lon="-72.1061"><name>GPT: Jeinimeni portal to Valle Hermoso refugio (one night, turn back at km 69) (start)</name><desc>about 32 km return over 2 days (16 km each way), about 300-450 m each way | ADD*</desc></wpt>
+<wpt lat="-46.905" lon="-72.165"><name>GPT: Jeinimeni portal to Valle Hermoso refugio (one night, turn back at km 69)</name><desc>about 32 km return over 2 days (16 km each way), about 300-450 m each way | ADD*</desc></wpt>
+<trk><name>GPT: Jeinimeni portal to Valle Hermoso refugio (one night, turn back at km 69) (approximate)</name><trkseg><trkpt lat="-46.8502" lon="-72.1061"/><trkpt lat="-46.905" lon="-72.165"/></trkseg></trk>
+<wpt lat="-46.8502" lon="-72.1061"><name>GPT: Jeinimeni portal to Raleigh camp / Lago Verde shelter (one night, low-risk variant) (start)</name><desc>about 18 km return over 2 days, about 200-350 m each way | MAYBE</desc></wpt>
+<wpt lat="-46.84" lon="-72.12"><name>GPT: Jeinimeni portal to Raleigh camp / Lago Verde shelter (one night, low-risk variant)</name><desc>about 18 km return over 2 days, about 200-350 m each way | MAYBE</desc></wpt>
+<trk><name>GPT: Jeinimeni portal to Raleigh camp / Lago Verde shelter (one night, low-risk variant) (approximate)</name><trkseg><trkpt lat="-46.8502" lon="-72.1061"/><trkpt lat="-46.84" lon="-72.12"/></trkseg></trk>
+<wpt lat="-47.597" lon="-72.497"><name>GPT: Mirador Laguna Calluqueo (drive-up viewpoint, Cochrane)</name><desc>1-3 km, &lt;100 m | ADD*</desc></wpt>
+<wpt lat="-47.3217" lon="-72.6"><name>GPT: Laguna Esmeralda (Cochrane, short stop)</name><desc>1-3 km, &lt;50 m | MAYBE</desc></wpt>
+<wpt lat="-45.5365" lon="-72.0165"><name>GPT: RN Coyhaique: full Cerro Cinchao loop via Laguna Verde (start)</name><desc>≈17–21 km, ≈950–1,000 m | ADD*</desc></wpt>
+<wpt lat="-45.5148" lon="-72.0289"><name>GPT: RN Coyhaique: full Cerro Cinchao loop via Laguna Verde</name><desc>≈17–21 km, ≈950–1,000 m | ADD*</desc></wpt>
+<trk><name>GPT: RN Coyhaique: full Cerro Cinchao loop via Laguna Verde (approximate)</name><trkseg><trkpt lat="-45.5365" lon="-72.0165"/><trkpt lat="-45.5148" lon="-72.0289"/></trkseg></trk>
+</gpx>

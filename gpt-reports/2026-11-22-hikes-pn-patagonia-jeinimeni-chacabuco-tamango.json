@@ -1,0 +1,94 @@
+[
+ {
+  "id": "lago_verde_camp",
+  "name": "Lago Verde camp (Jeinimeni, one-night tent trip)",
+  "area": "PN Patagonia (Jeinimeni sector)",
+  "dist": "≈20–30 km return over 2 days",
+  "gain": "≈300–450 m",
+  "time": "4–6 h each way",
+  "sac": "T3",
+  "kind": "overnight",
+  "nights": 1,
+  "hazards": [
+   "ford",
+   "navigation"
+  ],
+  "note": "Tent trip from the CONAF Jeinimeni camp area past Laguna Esmeralda to a camp at Lago Verde, back next day. The main ford (Rio Jeinimeni) is ankle to knee early season but mid-thigh after rain; do not cross above the knee. Designated camps only, no fires assumed; park open Jan-Apr 09:00-18:00. Road X-753 needs a high-clearance 4x4 and low rivers. Distances and the camp point are unverified; ask the guardaparque.",
+  "pts": [
+   [
+    -46.8502,
+    -72.1061
+   ],
+   [
+    -46.837865,
+    -72.118438
+   ]
+  ],
+  "camps": [
+   [
+    -46.837865,
+    -72.118438
+   ]
+  ],
+  "verdict": "MAYBE",
+  "conf": "low"
+ },
+ {
+  "id": "tamango_cangrejo_camp",
+  "name": "Tamango: Laguna Cangrejo area camp (one night)",
+  "area": "RN Tamango (PN Patagonia, Cochrane)",
+  "dist": "≈11 km return",
+  "gain": "≈400 m",
+  "time": "2–3 h each way",
+  "sac": "T2",
+  "kind": "overnight",
+  "nights": 1,
+  "hazards": [
+   "navigation"
+  ],
+  "note": "Easy tent trip 4 km from Cochrane. Entry about 11,400 CLP per foreign adult (2025 price); Camping Tamango at the gate is 8,000 CLP per person. Wild camping is reported allowed only at existing camps, so ask the ranger and stay inside the reserve (the Paso Los Condores gate is private land). Camp point comes from a hiker report.",
+  "pts": [
+   [
+    -47.2229,
+    -72.5266
+   ],
+   [
+    -47.18812,
+    -72.52718
+   ]
+  ],
+  "camps": [
+   [
+    -47.18812,
+    -72.52718
+   ]
+  ],
+  "verdict": "MAYBE",
+  "conf": "low"
+ },
+ {
+  "id": "aviles_upper_camp",
+  "name": "Upper Valle Aviles camp (one night)",
+  "area": "PN Patagonia (Valle Chacabuco)",
+  "dist": "≈15–20 km return",
+  "gain": "≈400–500 m",
+  "time": "4–5 h each way",
+  "sac": "T3",
+  "kind": "overnight",
+  "nights": 1,
+  "hazards": [
+   "ford",
+   "navigation"
+  ],
+  "note": "Out-and-back up Valle Aviles to the only wild-camping zone in the main park, above the suspension bridge. Rio Aviles fords are ankle to knee; a crossing path was destroyed in 2025, so check with rangers. Confirm camp rules and fees at West Winds.",
+  "pts": [
+   [
+    -47.1274,
+    -72.5047
+   ]
+  ],
+  "camps": [],
+  "verdict": "MAYBE",
+  "conf": "low"
+ }
+]

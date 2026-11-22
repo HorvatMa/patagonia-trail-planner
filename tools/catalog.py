@@ -123,6 +123,52 @@ POINT_NOTE = {"aviles": "Marker = trailhead at West Winds; the loop heads north 
               "explor_mirador": "Marker = viewpoint, at about km 52 of the Exploradores valley road."}
 
 
+
+# ---------------------------------------------------------------- quiet hikes added for trip patagonia-new (Nov 2026 hike-researcher reports,
+# points corrected by the geo-verifier on 2026-11-22; see gpt-reports/2026-11-22-hikes-*.md)
+H.update({
+ "chirifo": ("Lagunas Chirifo (one night)", "Puerto Río Tranquilo", "≈17 km return over 2 days", "≈1,180 m", "4–5 h up, 4–5 h down", "Demanding, unmarked", True,
+         "A quiet, unmarked route from the edge of Puerto Río Tranquilo up to a chain of lagoons above the busy village. Camp on lenga patches above the third lagoon and walk down the next day. No water on the climb, parts of the route are confusing, and there is no OSM path: download the Wikiexplora GPX before you go. Free, no permit known. Park the car at a campground in the village."),
+ "rodado": ("Lagunilla del Rodado", "Valle Exploradores", "≈3.7 km return", "≈475 m", "2–3 h", "Steep, off-trail", False,
+         "Off-trail climb up a stream bed from a pull-out at about km 26.5 of the Exploradores road to a small, hidden lake. One awkward 50 m stretch beside a rock wall; no fords. Free. The tour traffic drives straight past. The lake position comes from OSM and is not checked on site: carry the Wikiexplora track."),
+ "jein_verde": ("Lago Verde camp, Jeinimeni (one night)", "PN Patagonia (Jeinimeni sector)", "≈19–25 km return over 2 days", "≈300–450 m", "4–6 h each way", "Moderate, fords", True,
+         "From the El Silencio camp past Laguna Esmeralda to a camp at Lago Verde, back the next day. The Río Jeinimeni ford is ankle to knee deep in normal water but mid-thigh after rain: don't cross if the water is brown or it rained the day before. Designated camps only, no fires; park open Jan–Apr 09:00–18:00, entry ≈11,400 CLP per person (2025). Road X-753 from Chile Chico needs high clearance and low rivers. Lago Verde has no OSM path, so carry a track."),
+ "tamango_camp": ("Tamango lakes camp (one night)", "Cochrane (RN Tamango)", "≈11 km return over 2 days", "≈400 m", "2–3 h each way", "Moderate", False,
+         "An easy tent night near Laguna El Cangrejo, 4 km from Cochrane, with a chance of huemul. Entry ≈11,400 CLP per person (2025). Wild camping only at existing camps: ask the ranger at the gate, and stay inside the reserve (the Paso Los Cóndores route crosses a private gate). Camping Tamango at the entrance (≈8,000 CLP per person) is the car's base."),
+ "dos_lagunas": ("Dos Lagunas: Laguna El Toro and Laguna Escondida", "Coyhaique–east", "≈6 km", "≈200 m", "2–3 h", "Easy", False,
+         "Short, quiet lake and wetland trails in a small CONAF monument on the road to Coyhaique Alto. Closed Mondays (Tue–Sun 09:00–17:00, last entry 15:30, per pasesparques.cl in Nov 2026). A good first or last half day near Balmaceda."),
+ "meseta_rincon": ("La Meseta to the Puesto El Rincón dome (one night)", "Parque Patagonia (AR), La Ascensión", "≈26 km return over 2 days", "≈700–900 m", "5–6 h each way", "Demanding, windy", True,
+         "Parque Patagonia Argentina's 'A la Meseta' trail from Estancia La Ascensión (17 km of easy gravel from Los Antiguos) up to the free dome and walk-in camp at Puesto El Rincón, back the next day. Register at the portal; no advance booking. Carry all water and wind-proof gear: the plateau is very exposed to wind (not to drops)."),
+ "laguna_coa": ("Cerro La Calle and Laguna Coa", "Parque Patagonia (AR), La Ascensión", "≈18–20 km return", "≈450 m", "6–7 h", "Moderate", True,
+         "Marked park trail from Estancia La Ascensión over Cerro La Calle to Laguna Coa, with views over Lago Buenos Aires. National park land, free, sign in at the portal. The official 10.5 km is one way."),
+ "cerro_negro_ar": ("Cerro Negro (Virgen del Camino)", "Parque Patagonia (AR), La Ascensión", "≈7–8 km return", "≈350 m", "2.5–3 h", "Moderate", False,
+         "Short summit walk (575 m) from the Virgen del Camino shrine on RP43, 5 km west of La Ascensión. Free. Pairs with Laguna Coa or a driving day."),
+ "cerro_leon": ("Cerro León", "PN Perito Moreno (AR)", "≈12.5 km return", "≈600 m", "4.5–5.5 h", "Demanding", True,
+         "Up Cerro León from Estancia La Oriental, with guanacos and views over Lagos Belgrano and Volcán, in one of Argentina's emptiest parks. Register at the Centro Operativo Clemente Onelli (09:00–19:00). Park open 1 Oct–30 Apr. Strong wind, no shops, no signal; the road in is long gravel (RP41 from Lago Posadas, 4x4). Entry fee not confirmed."),
+ "belgrano": ("Península Belgrano small circuit", "PN Perito Moreno (AR)", "≈9.6 km", "≈400–700 m", "3–4 h", "Moderate", True,
+         "Loop on the Belgrano peninsula past turquoise bays (Sendero Roca Azul, Refugio 2 Bahías). The trailhead is probably near Estancia Lago Belgrano; ask at the Centro Operativo. The large 16.8 km circuit is rated 'high difficulty': ask the rangers before trying it."),
+ "lago_volcan": ("Mirador and shore of Lago Volcán", "PN Perito Moreno (AR)", "≈5–10 km return", "≈150 m", "2–3 h", "Easy", False,
+         "Easy walk from a parking spot near El Rincón to the shore of Lago Volcán. Combine it with Cerro León."),
+ "los_pumas": ("Laguna Los Pumas", "PN Queulat (Lago Risopatrón)", "≈10 km return", "≈600 m", "4–6 h", "Demanding", True,
+         "A steep forest climb with roots and mud from the east end of Lago Risopatrón (12 km north of Puyuhuapi) to a hidden lagoon, away from the Ventisquero Colgante crowds. Needs a CONAF ticket (pasesparques.cl); ask the Angostura ranger about hours (reported Tue–Sun 09:00–14:30). The upper trail is not in OSM: carry a track."),
+ "chucao": ("Sendero Chucao to the sea", "Puerto Raúl Marín Balmaceda", "≈3.7 km return", "≈20 m", "1.5–2 h", "Easy", False,
+         "A flat path through the quiet fishing village at the mouth of the Río Palena to the sea, with a side trail to the cemetery. The village is 74 km of gravel from La Junta (≈2 h)."),
+})
+HP.update({
+ "chirifo": (-46.6544,-72.7115), "rodado": (-46.5705,-72.9210), "jein_verde": (-46.8502,-72.1061), "tamango_camp": (-47.1877,-72.5228),
+ "dos_lagunas": (-45.5298,-71.8535), "meseta_rincon": (-46.7032,-71.4520), "laguna_coa": (-46.6684,-71.4843), "cerro_negro_ar": (-46.6083,-71.5274),
+ "cerro_leon": (-47.7791,-72.1338), "belgrano": (-47.8806,-72.1392), "lago_volcan": (-47.775,-72.23), "los_pumas": (-44.2290,-72.5660),
+ "chucao": (-43.7685,-72.9597),
+})
+POINT_NOTE.update({
+ "chucao": "Marker = start of Sendero Chucao in the village.",
+ "belgrano": "Marker = Sendero Roca Azul on the peninsula (approximate); ask at the Centro Operativo for the trailhead.",
+ "jein_verde": "Marker = Lago Verde; the walk starts at the El Silencio camp (≈-46.838, -72.012).",
+ "rodado": "Marker = the lake from OSM; the walk starts at a pull-out at about km 26.5 of the Exploradores road.",
+ "chirifo": "Marker = the first lake from OSM (approximate); the route starts at the end of Calle Los Arrayanes in the village.",
+})
+
+
 # ---------------------------------------------------------------- difficulty (SAC hiking scale T1–T6) and hazards
 # sac:     T1 easy trail · T2 mountain trail · T3 demanding mountain trail (steep, loose, some hands for balance)
 #          T4 alpine route (scrambling, exposure) · T5 demanding alpine · T6 difficult alpine
@@ -146,5 +192,15 @@ GRADE = {
  "desierto": _g("T2", hazards=["private-land"]), "pmoreno": _g("T1", "activity"), "cuevamanos": _g("T1", "activity", hazards=["guided"]),
  "base_torres": _g("T3", hazards=["steep-loose"]), "cuernos": _g("T1"), "grey": _g("T1"),
 }
+GRADE.update({
+ "chirifo": _g("T3", "overnight", 1, ["navigation", "steep-loose"], [(-46.6560, -72.7150)]),
+ "rodado": _g("T3", hazards=["navigation", "steep-loose"]),
+ "jein_verde": _g("T3", "overnight", 1, ["ford", "navigation"], [(-46.8379, -72.1184)]),
+ "tamango_camp": _g("T2", "overnight", 1, ["navigation"], [(-47.18812, -72.52718)]),
+ "dos_lagunas": _g("T1"), "meseta_rincon": _g("T3", "overnight", 1, ["navigation"], [(-46.7032, -71.4520)]),
+ "laguna_coa": _g("T2", hazards=["navigation"]), "cerro_negro_ar": _g("T2"),
+ "cerro_leon": _g("T3", hazards=["navigation", "steep-loose"]), "belgrano": _g("T3", hazards=["navigation"]),
+ "lago_volcan": _g("T1"), "los_pumas": _g("T3", hazards=["steep-loose"]), "chucao": _g("T1"),
+})
 _missing = set(H) - set(GRADE)
 assert not _missing, f"hikes without GRADE: {_missing}"

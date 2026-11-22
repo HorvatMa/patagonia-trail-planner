@@ -1,0 +1,29 @@
+[
+ {
+  "id": "lago_verde_km0_5",
+  "name": "Lago Verde village to the km-5.5 camp (GPT28H start)",
+  "kind": "day",
+  "verdict": "MAYBE",
+  "conf": "low",
+  "area": "Lago Verde, northern Aysén",
+  "ref": "GPT28H km 0 to 5.5 [manual p.712]",
+  "dist": "about 11 km return (about 8 km if turned at the private-property sign at km 4)",
+  "gain": "about 100 to 250 m [estimate]",
+  "time": "3 to 4 h",
+  "terrain": "Minor gravel road for about 4 km, then trail through a settlement; stream water; no fords before km 13",
+  "cost": "free; fuel and a long gravel drive (X-10, about 70 km from La Junta)",
+  "caution": "private-land (sign at km 4; farm crossing km 6 to 10 needed permission in Feb 2026), navigation; dead-end village; only worth it if the plan visits Lago Verde anyway",
+  "why": "Quiet border village walk; the plateau beyond is not recommended because of the landowner issue and fords",
+  "pts": [
+   [
+    -44.2385,
+    -71.8502
+   ],
+   [
+    -44.283,
+    -71.8638
+   ]
+  ],
+  "fits": {}
+ }
+]

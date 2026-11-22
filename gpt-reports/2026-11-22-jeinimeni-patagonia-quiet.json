@@ -1,0 +1,56 @@
+[
+ {
+  "id": "jeinimeni_valle_hermoso_night",
+  "name": "Jeinimeni portal to Valle Hermoso refugio (one night, turn back at km 69)",
+  "kind": "overnight",
+  "verdict": "ADD*",
+  "conf": "medium",
+  "area": "Reserva/PN Patagonia, Jeinimeni sector",
+  "ref": "GPT35 km 53-69; manual pp. 417-418, 783-786",
+  "dist": "about 32 km return over 2 days (16 km each way)",
+  "gain": "about 300-450 m each way",
+  "time": "about 6 h per day",
+  "terrain": "T2/T3 marked trail, bridges to km 59, fords km 63-69 (knee at most in 2025-26 reports), hazards: ford, navigation",
+  "cost": "park entry about CLP 11,400 pp; camping CLP 0-10,000 pp (reports differ); fuel for about 120 km gravel return from Chile Chico",
+  "caution": "do not cross if water is brown or after rain; turn back at km 69 (fords beyond are mid-thigh); X-753 fords near the lake; camp coordinates are estimates; trail washed out at -46.8897,-72.1647 (use OSM detour)",
+  "why": "Valle Hermoso glacier valley, the real Aviles scenery; the Lago Verde day walk only shows the lake",
+  "pts": [
+   [
+    -46.8502,
+    -72.1061
+   ],
+   [
+    -46.905,
+    -72.165
+   ]
+  ],
+  "fits": {}
+ },
+ {
+  "id": "jeinimeni_raleigh_night",
+  "name": "Jeinimeni portal to Raleigh camp / Lago Verde shelter (one night, low-risk variant)",
+  "kind": "overnight",
+  "verdict": "MAYBE",
+  "conf": "low",
+  "area": "Reserva/PN Patagonia, Jeinimeni sector",
+  "ref": "GPT35 km 53-62; Option D; manual pp. 417-418",
+  "dist": "about 18 km return over 2 days",
+  "gain": "about 200-350 m each way",
+  "time": "about 3 h each way",
+  "terrain": "T2 marked trail, bridges, small fords, hazards: ford",
+  "cost": "park entry about CLP 11,400 pp; camping CLP 0-10,000 pp",
+  "caution": "camp in the open, not under trees (black worms warning 2025-01); coordinates not verified",
+  "why": "fallback if the rivers are too high for Valle Hermoso",
+  "pts": [
+   [
+    -46.8502,
+    -72.1061
+   ],
+   [
+    -46.84,
+    -72.12
+   ]
+  ],
+  "fits": {}
+ }
+]

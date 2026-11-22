@@ -1,0 +1,94 @@
+[
+ {
+  "id": "altavista_laguna_toro_voh",
+  "name": "Villa O'Higgins: Altavista trail to Laguna El Loco and El Toro",
+  "area": "Villa O'Higgins",
+  "dist": "≈18 km return",
+  "gain": "≈400 m",
+  "time": "≈5 h",
+  "sac": "T2",
+  "kind": "day",
+  "nights": 0,
+  "hazards": [
+   "navigation",
+   "private-land"
+  ],
+  "note": "Quiet out-and-back from the Mayer bridge past three viewpoints (2.3, 4, 5.5 km) to Laguna El Toro; marked to the third viewpoint; starts through a gate on private land (standard public route). Ask at the visitor centre.",
+  "pts": [
+   [
+    -48.485,
+    -72.585
+   ],
+   [
+    -48.505,
+    -72.605
+   ]
+  ],
+  "camps": [],
+  "verdict": "ADD*",
+  "conf": "medium (length), low (coordinates)"
+ },
+ {
+  "id": "mosco_valley_camp_voh",
+  "name": "Villa O'Higgins: Río Mosco valley, one night",
+  "area": "Villa O'Higgins",
+  "dist": "≈25–30 km over 2 days",
+  "gain": "≈600–900 m",
+  "time": "2 days",
+  "sac": "T3",
+  "kind": "overnight",
+  "nights": 1,
+  "hazards": [
+   "navigation",
+   "ford",
+   "steep-loose"
+  ],
+  "note": "Route towards the Mosco Glacier, camp at Camp Patagones. Reported damaged 2023/24, reopening unconfirmed. Register with Carabineros.",
+  "pts": [
+   [
+    -48.4735,
+    -72.5084
+   ],
+   [
+    -48.52,
+    -72.49
+   ]
+  ],
+  "camps": [
+   [
+    -48.51,
+    -72.5
+   ]
+  ],
+  "verdict": "MAYBE",
+  "conf": "low"
+ },
+ {
+  "id": "tamanguito_loop_cochrane",
+  "name": "Cochrane: Laguna Tamanguito loop",
+  "area": "Cochrane (RN Tamango)",
+  "dist": "≈10–14 km loop",
+  "gain": "≈700 m",
+  "time": "4–6 h",
+  "sac": "T3",
+  "kind": "day",
+  "nights": 0,
+  "hazards": [
+   "steep-loose"
+  ],
+  "note": "Las Lengas up, Los Pumas down; likely overlaps catalogue 'tamango'.",
+  "pts": [
+   [
+    -47.2229,
+    -72.5266
+   ],
+   [
+    -47.2,
+    -72.54
+   ]
+  ],
+  "camps": [],
+  "verdict": "MAYBE",
+  "conf": "low"
+ }
+]

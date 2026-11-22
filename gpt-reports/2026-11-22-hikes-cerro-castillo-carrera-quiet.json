@@ -1,0 +1,90 @@
+[
+ {
+  "id": "chirifo_lagunas",
+  "name": "Lagunas Chirifo from Puerto Río Tranquilo (one night)",
+  "area": "Puerto Río Tranquilo",
+  "dist": "≈17 km return",
+  "gain": "≈1,180 m",
+  "time": "2 days (4–5 h up, 4–5 h down)",
+  "sac": "T3",
+  "kind": "overnight",
+  "nights": 1,
+  "hazards": [
+   "navigation",
+   "steep-loose"
+  ],
+  "note": "Unmarked route from the edge of Río Tranquilo to a chain of lagoons; camp above the third lagoon. No water on the climb; GPS needed; free. Coordinates approximate (verify against the Wikiexplora GPX).",
+  "pts": [
+   [
+    -46.6205,
+    -72.6775
+   ],
+   [
+    -46.648,
+    -72.687
+   ]
+  ],
+  "camps": [],
+  "verdict": "ADD*",
+  "conf": "low-medium"
+ },
+ {
+  "id": "miller_valle_camp",
+  "name": "Valle Miller to base camp (one night)",
+  "area": "Puerto Sánchez",
+  "dist": "≈16 km return (estimate)",
+  "gain": "≈550 m (estimate)",
+  "time": "2 days",
+  "sac": "T3",
+  "kind": "overnight",
+  "nights": 1,
+  "hazards": [
+   "navigation",
+   "ford",
+   "private-land"
+  ],
+  "note": "Remote valley via Bahía Murta, X-731 and 17 km gravel from Puerto Sánchez; braided ford; gates through grazing land; local guides recommended. Coordinates rough.",
+  "pts": [
+   [
+    -46.5,
+    -72.53
+   ],
+   [
+    -46.45,
+    -72.58
+   ]
+  ],
+  "camps": [],
+  "verdict": "MAYBE",
+  "conf": "low"
+ },
+ {
+  "id": "rodado_lagunilla",
+  "name": "Lagunilla del Rodado (Valle Exploradores)",
+  "area": "Valle Exploradores",
+  "dist": "≈3.7 km return",
+  "gain": "≈475 m",
+  "time": "2–3 h",
+  "sac": "T3",
+  "kind": "day",
+  "nights": 0,
+  "hazards": [
+   "navigation",
+   "steep-loose"
+  ],
+  "note": "Off-trail climb up a stream bed from the km 26.5 pullout on X-728 to a small lake. Free. Wikiexplora route.",
+  "pts": [
+   [
+    -46.5735,
+    -72.9014
+   ],
+   [
+    -46.585,
+    -72.905
+   ]
+  ],
+  "camps": [],
+  "verdict": "MAYBE",
+  "conf": "low-medium"
+ }
+]

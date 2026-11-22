@@ -1,0 +1,116 @@
+[
+ {
+  "id": "queulat_los_pumas",
+  "name": "Sendero Laguna Los Pumas (Angostura sector)",
+  "area": "PN Queulat north, Lago Risopatrón",
+  "dist": "≈10 km return",
+  "gain": "≈600 m",
+  "time": "4–6 h",
+  "sac": "T3",
+  "kind": "day",
+  "nights": 0,
+  "hazards": [
+   "steep-loose"
+  ],
+  "note": "Steep forest climb from the Lago Risopatrón campsites to Laguna Los Pumas, away from the Ventisquero Colgante crowds. Needs a CONAF ticket and the ranger house at Angostura is the contact; check hours (Tue–Sun, about 09:00–14:30). Roots and mud, so wear sturdy boots. Distance and ascent are estimates, so carry a GPS track.",
+  "pts": [
+   [
+    -44.238,
+    -72.533
+   ],
+   [
+    -44.229,
+    -72.566
+   ]
+  ],
+  "camps": [],
+  "verdict": "ADD*",
+  "conf": "medium-low"
+ },
+ {
+  "id": "lago_verde_plateau",
+  "name": "Lago Verde to the km-13 plateau lakes (GPT28H start)",
+  "area": "Lago Verde, northern Aysén",
+  "dist": "≈22–26 km return",
+  "gain": "≈300–600 m",
+  "time": "6–8 h",
+  "sac": "T2",
+  "kind": "day",
+  "nights": 0,
+  "hazards": [
+   "ford",
+   "navigation",
+   "private-land"
+  ],
+  "note": "Out and back on the first part of the Lago Verde to La Tapera track through forest to a plateau with lakes. A stretch near km 6–10 needed landowner permission (not a problem for hikers in 2025), and fords are calf to knee. Remote, with mine trucks reported; carry water treatment and insect protection.",
+  "pts": [
+   [
+    -44.2402,
+    -71.8493
+   ],
+   [
+    -44.2402,
+    -71.8493
+   ]
+  ],
+  "camps": [],
+  "verdict": "MAYBE",
+  "conf": "low"
+ },
+ {
+  "id": "lago_verde_plateau_camp",
+  "name": "Lago Verde plateau camp (one night)",
+  "area": "Lago Verde, northern Aysén",
+  "dist": "≈26–44 km over 2 days",
+  "gain": "≈500–800 m",
+  "time": "2 days",
+  "sac": "T2",
+  "kind": "overnight",
+  "nights": 1,
+  "hazards": [
+   "ford",
+   "navigation",
+   "private-land"
+  ],
+  "note": "Tent version of the Lago Verde plateau walk, camping at a water point around km 13–22. Little wind shelter on the plateau and the same landowner and ford issues. Confirm conditions before going.",
+  "pts": [
+   [
+    -44.2402,
+    -71.8493
+   ],
+   [
+    -44.2402,
+    -71.8493
+   ]
+  ],
+  "camps": [],
+  "verdict": "MAYBE",
+  "conf": "low"
+ },
+ {
+  "id": "raul_marin_chucao",
+  "name": "Sendero Chucao and beach, Puerto Raúl Marín Balmaceda",
+  "area": "Palena delta coast",
+  "dist": "≈3.7 km return",
+  "gain": "≈20 m",
+  "time": "1.5–2 h",
+  "sac": "T1",
+  "kind": "day",
+  "nights": 0,
+  "hazards": [],
+  "note": "Flat coastal path through the fishing village to the sea, with a short side trail to the cemetery. Reached by about 70 km of gravel from La Junta; a good rest-day walk. Check the ferry to Puerto Cisnes if combining.",
+  "pts": [
+   [
+    -43.7685,
+    -72.9597
+   ],
+   [
+    -43.7771,
+    -72.9521
+   ]
+  ],
+  "camps": [],
+  "verdict": "ADD*",
+  "conf": "medium"
+ }
+]

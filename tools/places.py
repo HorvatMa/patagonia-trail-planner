@@ -31,6 +31,10 @@ PLACES = {
  "Los Antiguos": (-46.55,-71.6278), "Paso Roballos": (-47.1577,-71.8544), "Bajo Caracoles": (-47.4442,-70.9283),
  "El Chaltén": (-49.3315,-72.8863), "El Calafate": (-50.3379,-72.2648), "Torres del Paine": (-50.9795,-72.8004),
  "Futaleufú": (-43.1854,-71.8669), "Chaitén": (-42.9167,-72.7083), "El Amarillo": (-43.0101,-72.483),
+ # added for trip patagonia-new (Nominatim, bounded boxes, 2026-11-22)
+ "Puerto Raúl Marín Balmaceda": (-43.7771,-72.9521), "La Junta": (-43.9721,-72.4053),
+ "La Ascensión": (-46.6072,-71.4075), "Lago Posadas": (-47.5656,-71.7427),
+ "PN Perito Moreno": (-47.8045,-72.0941), "Jeinimeni El Silencio": (-46.8382,-72.0120),
 }
 
 # every airport is also a place (by code)

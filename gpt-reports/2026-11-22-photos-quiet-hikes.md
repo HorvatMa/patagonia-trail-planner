@@ -1,0 +1,46 @@
+# Photo Scout report: photos-quiet-hikes
+
+*Saved automatically by the SubagentStop hook on 2026-11-22.*
+
+PHOTO-SCOUT REPORT: quiet-hikes
+Date check: today is 2026-11-22.
+
+| key | verdict | kept | looked at | note |
+|---|---|---|---|---|
+| los_pumas | OK | 1 | 1 | Dusk lake shot titled "Risopatrón". Title is the only evidence, so it is weaker than the others. |
+| rodado | NONE | 0 | 0 | Only old book scans came back, so I rejected them without looking. |
+| chirifo | NONE | 0 | 3 | Only photos of the town of Puerto Tranquilo. None shows the lakes. |
+| tamango_camp | OK | 1 | 5 | Lake with Cerro Tamango. The other candidates were a sign, a map and river shots. |
+| laguna_coa | NONE | 0 | 0 | Searches returned only street signs and plaques from elsewhere. |
+| cerro_negro_ar | NONE | 0 | 3 | Only town and park shots of Los Antiguos. None shows the peak. |
+| dos_lagunas | OK | 2 | 4 | Laguna El Toro, from the shore and from above. |
+| chucao | OK | 2 | 6 | Beach and sea at Puerto Raúl Marín Balmaceda, matching "to the sea". |
+| jein_verde | OK | 2 | 4 | Turquoise Lago Verde with snowy peaks. |
+| lago_volcan | NONE | 0 | 1 | The only candidates were Perito Moreno Glacier shots, a sunrise from elsewhere and generic park images. |
+| cerro_leon | OK | 1 | 2 | Panorama titled "Cerro León" with lakes and a peak. |
+| belgrano | NONE | 0 | 0 | Only plant close-ups came back. |
+| meseta_rincon | NONE | 0 | 0 | Nothing relevant came back. |
+
+```json
+[
+{"key":"los_pumas","verdict":"OK","looked":1,"note":"Lago Risopatrón at dusk, Queulat; evidence is the title only","photos":[{"title":"File:Risopatrón.jpg","w":1987,"thumb":"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Risopatr%C3%B3n.jpg/960px-Risopatr%C3%B3n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail","full":"https://upload.wikimedia.org/wikipedia/commons/3/3b/Risopatr%C3%B3n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original","page":"https://commons.wikimedia.org/wiki/File:Risopatr%C3%B3n.jpg","shows":"Forested lake valley at dusk with reeds (Lago Risopatrón)"}]},
+{"key":"rodado","verdict":"NONE","looked":0,"note":"only old book scans found","photos":[]},
+{"key":"chirifo","verdict":"NONE","looked":3,"note":"only town shots of Puerto Tranquilo, not the lakes","photos":[]},
+{"key":"tamango_camp","verdict":"OK","looked":5,"note":"lake with Cerro Tamango in RN Lago Cochrane","photos":[{"title":"File:Cerro Tamango Reserva Nacional Lago Cochrane 05.jpg","w":4608,"thumb":"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Cerro_Tamango_Reserva_Nacional_Lago_Cochrane_05.jpg/960px-Cerro_Tamango_Reserva_Nacional_Lago_Cochrane_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail","full":"https://upload.wikimedia.org/wikipedia/commons/6/6c/Cerro_Tamango_Reserva_Nacional_Lago_Cochrane_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original","page":"https://commons.wikimedia.org/wiki/File:Cerro_Tamango_Reserva_Nacional_Lago_Cochrane_05.jpg","shows":"Lake edge with beech forest and the rocky Cerro Tamango"}]},
+{"key":"laguna_coa","verdict":"NONE","looked":0,"note":"nothing relevant found","photos":[]},
+{"key":"cerro_negro_ar","verdict":"NONE","looked":3,"note":"only Los Antiguos town and park shots, not the peak","photos":[]},
+{"key":"dos_lagunas","verdict":"OK","looked":4,"note":"Laguna El Toro, Monumento Natural Dos Lagunas","photos":[
+{"title":"File:Laguna El Toro.jpg","w":5184,"thumb":"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Laguna_El_Toro.jpg/960px-Laguna_El_Toro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail","full":"https://upload.wikimedia.org/wikipedia/commons/e/e3/Laguna_El_Toro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original","page":"https://commons.wikimedia.org/wiki/File:Laguna_El_Toro.jpg","shows":"Laguna El Toro from above, with steppe hills around it"},
+{"title":"File:Lago El Toro.jpg","w":4608,"thumb":"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Lago_El_Toro.jpg/960px-Lago_El_Toro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail","full":"https://upload.wikimedia.org/wikipedia/commons/d/d2/Lago_El_Toro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original","page":"https://commons.wikimedia.org/wiki/File:Lago_El_Toro.jpg","shows":"Lake shore and trail on the hillside"}]},
+{"key":"chucao","verdict":"OK","looked":6,"note":"beach and sea at Puerto Raúl Marín Balmaceda","photos":[
+{"title":"File:Puerto Raúl Marín Balmaceda 13.jpg","w":4032,"thumb":"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Puerto_Ra%C3%BAl_Mar%C3%ADn_Balmaceda_13.jpg/960px-Puerto_Ra%C3%BAl_Mar%C3%ADn_Balmaceda_13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail","full":"https://upload.wikimedia.org/wikipedia/commons/6/63/Puerto_Ra%C3%BAl_Mar%C3%ADn_Balmaceda_13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original","page":"https://commons.wikimedia.org/wiki/File:Puerto_Ra%C3%BAl_Mar%C3%ADn_Balmaceda_13.jpg","shows":"Dune grass beach with the sea and an island"},
+{"title":"File:Puerto Raúl Marín Balmaceda 10.jpg","w":4608,"thumb":"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Puerto_Ra%C3%BAl_Mar%C3%ADn_Balmaceda_10.jpg/960px-Puerto_Ra%C3%BAl_Mar%C3%ADn_Balmaceda_10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail","full":"https://upload.wikimedia.org/wikipedia/commons/5/5b/Puerto_Ra%C3%BAl_Mar%C3%ADn_Balmaceda_10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original","page":"https://commons.wikimedia.org/wiki/File:Puerto_Ra%C3%BAl_Mar%C3%ADn_Balmaceda_10.jpg","shows":"Surf on the dark-sand beach under a grey sky"}]},
+{"key":"jein_verde","verdict":"OK","looked":4,"note":"Lago Verde, Jeinimeni sector","photos":[
+{"title":"File:Lago Verde, Sector Jeinimeni, Patagonia National Park.jpg","w":4032,"thumb":"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Lago_Verde%2C_Sector_Jeinimeni%2C_Patagonia_National_Park.jpg/960px-Lago_Verde%2C_Sector_Jeinimeni%2C_Patagonia_National_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail","full":"https://upload.wikimedia.org/wikipedia/commons/9/93/Lago_Verde%2C_Sector_Jeinimeni%2C_Patagonia_National_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original","page":"https://commons.wikimedia.org/wiki/File:Lago_Verde,_Sector_Jeinimeni,_Patagonia_National_Park.jpg","shows":"Turquoise Lago Verde with snowy peaks behind"},
+{"title":"File:Lago Verde y Valle Hermoso.jpg","w":4484,"thumb":"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Lago_Verde_y_Valle_Hermoso.jpg/960px-Lago_Verde_y_Valle_Hermoso.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail","full":"https://upload.wikimedia.org/wikipedia/commons/2/23/Lago_Verde_y_Valle_Hermoso.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original","page":"https://commons.wikimedia.org/wiki/File:Lago_Verde_y_Valle_Hermoso.jpg","shows":"Lago Verde and the river flats of Valle Hermoso with glaciated peaks"}]},
+{"key":"lago_volcan","verdict":"NONE","looked":1,"note":"only Perito Moreno Glacier shots and generic park images","photos":[]},
+{"key":"cerro_leon","verdict":"OK","looked":2,"note":"panorama titled Cerro León, probably taken from the summit; no coordinates","photos":[{"title":"File:Foto Rocío panorámica Cerro León.jpg","w":4160,"thumb":"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Foto_Roc%C3%ADo_panor%C3%A1mica_Cerro_Le%C3%B3n.jpg/960px-Foto_Roc%C3%ADo_panor%C3%A1mica_Cerro_Le%C3%B3n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail","full":"https://upload.wikimedia.org/wikipedia/commons/7/72/Foto_Roc%C3%ADo_panor%C3%A1mica_Cerro_Le%C3%B3n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original","page":"https://commons.wikimedia.org/wiki/File:Foto_Roc%C3%ADo_panor%C3%A1mica_Cerro_Le%C3%B3n.jpg","shows":"Panorama of turquoise lakes and a snow-dusted peak from a ridge"}]},
+{"key":"belgrano","verdict":"NONE","looked":0,"note":"only plant close-ups found","photos":[]},
+{"key":"meseta_rincon","verdict":"NONE","looked":0,"note":"nothing relevant found","photos":[]}
+]
+```
