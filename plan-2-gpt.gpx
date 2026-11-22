@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="patagonia-plans" xmlns="http://www.topografix.com/GPX/1/1">
+<metadata><name>Plan 2 GPT options</name></metadata>
+<wpt lat="-46.1182" lon="-72.2178"><name>GPT: Valle Neozelandés via Estero Parada (optional Laguna Duff) (start)</name><desc>≈20–22 km return, ≈900–1,000 m | ADD*</desc></wpt>
+<wpt lat="-46.0891" lon="-72.2354"><name>GPT: Valle Neozelandés via Estero Parada (optional Laguna Duff) (via 1)</name><desc>≈20–22 km return, ≈900–1,000 m | ADD*</desc></wpt>
+<wpt lat="-46.0612" lon="-72.2376"><name>GPT: Valle Neozelandés via Estero Parada (optional Laguna Duff)</name><desc>≈20–22 km return, ≈900–1,000 m | ADD*</desc></wpt>
+<trk><name>GPT: Valle Neozelandés via Estero Parada (optional Laguna Duff) (approximate)</name><trkseg><trkpt lat="-46.1182" lon="-72.2178"/><trkpt lat="-46.0891" lon="-72.2354"/><trkpt lat="-46.0612" lon="-72.2376"/></trkseg></trk>
+<wpt lat="-46.7913" lon="-71.8979"><name>GPT: Plateau lagoons above the Jeinimeni road (guanacos, flamingos) (start)</name><desc>≈21 km return (≈25 km to the upper plateau), ≈800–900 m | ADD</desc></wpt>
+<wpt lat="-46.713" lon="-71.886"><name>GPT: Plateau lagoons above the Jeinimeni road (guanacos, flamingos)</name><desc>≈21 km return (≈25 km to the upper plateau), ≈800–900 m | ADD</desc></wpt>
+<trk><name>GPT: Plateau lagoons above the Jeinimeni road (guanacos, flamingos) (approximate)</name><trkseg><trkpt lat="-46.7913" lon="-71.8979"/><trkpt lat="-46.713" lon="-71.886"/></trkseg></trk>
+<wpt lat="-47.5972" lon="-72.4972"><name>GPT: Glaciar Calluqueo viewpoint (drive-up)</name><desc>short walks, – | MAYBE</desc></wpt>
+<wpt lat="-46.8382" lon="-72.012"><name>GPT: Jeinimeni → Lago Verde → Valle Hermoso (one night) (start)</name><desc>≈16 km each way, ≈300–450 m each way | MAYBE</desc></wpt>
+<wpt lat="-46.8435" lon="-72.1727"><name>GPT: Jeinimeni → Lago Verde → Valle Hermoso (one night)</name><desc>≈16 km each way, ≈300–450 m each way | MAYBE</desc></wpt>
+<trk><name>GPT: Jeinimeni → Lago Verde → Valle Hermoso (one night) (approximate)</name><trkseg><trkpt lat="-46.8382" lon="-72.012"/><trkpt lat="-46.8435" lon="-72.1727"/></trkseg></trk>
+<wpt lat="-47.5181" lon="-72.3158"><name>GPT: Refugio Toni Röhrer under Monte San Lorenzo (one night)</name><desc>≈9.5 km each way, ≈325 m each way | MAYBE</desc></wpt>
+</gpx>

@@ -1,0 +1,54 @@
+{
+  "id": "2027-balmaceda",
+  "title": "Patagonia day-hiking plans",
+  "short_title": "Patagonia 2027",
+  "start_date": "2027-01-27",
+  "end_date": "2027-02-21",
+  "people": 2,
+  "home": "Zagreb",
+  "international_airport": "SCL",
+  "car": {
+    "pickup": "BBA",
+    "dropoff": "BBA",
+    "type": "4x4",
+    "argentina_allowed": true
+  },
+  "sleeping": "car",
+  "budget": {
+    "currency": "EUR",
+    "max_per_person": 1500,
+    "prefer_cheaper": true,
+    "covers": "food, fuel, campgrounds, park fees, ferries (not flights or the car)"
+  },
+  "guided_trips": "avoid (mention only really worthwhile ones, marked optional)",
+  "hiking": {
+    "max_sac": "T3",
+    "day_hike_max_km": 25,
+    "day_hike_max_ascent_m": 1300,
+    "max_ford": "knee",
+    "excluded_hazards": [
+      "exposure",
+      "scramble",
+      "glacier",
+      "tyrolean",
+      "packraft",
+      "ford-deep"
+    ],
+    "cross_country": "easy open terrain only",
+    "overnight_trips": {
+      "min": 0,
+      "max": 0,
+      "note": "optional one-night trips only as GPT options"
+    },
+    "multiday_treks": {
+      "min": 0,
+      "max": 0,
+      "max_days": 0
+    },
+    "flex_days_min": 3
+  },
+  "browser": "firefox",
+  "output_dir": ".",
+  "arrival_note": "Jan 26: depart Zagreb. Jan 27: land in Santiago and fly on to Balmaceda the same day. Feb 21: fly out of Balmaceda (a morning or midday flight), and fly home on Feb 22.",
+  "footer_note": "Made for Jan 26 – Feb 22, 2027."
+}

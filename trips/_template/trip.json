@@ -1,0 +1,55 @@
+{
+  "_help": "Copy this folder to trips/<id>/ and fill it in. Keys starting with _ are ignored. SAC grades: T1 easy trail, T2 mountain trail, T3 demanding mountain trail, T4 alpine route (scrambling/exposure), T5–T6 alpine. Hazards: exposure, scramble, glacier, tyrolean, packraft, ford, ford-deep, navigation, steep-loose, snow, boat, guided, private-land. Airports in tools/places.py: PMC, BBA, PUQ, PNT, FTE, BRC, USH, EQS.",
+  "id": "YYYY-start",
+  "title": "Patagonia hiking plans",
+  "short_title": "Patagonia YYYY",
+  "lede": "One paragraph describing what these plans are for (shown on the overview page).",
+  "start_date": "YYYY-MM-DD",
+  "end_date": "YYYY-MM-DD",
+  "people": 2,
+  "home": "",
+  "international_airport": "SCL",
+  "car": {
+    "pickup": "BBA",
+    "dropoff": "BBA",
+    "type": "4x4",
+    "argentina_allowed": false
+  },
+  "sleeping": "car | tent | hostels | mixed",
+  "budget": {
+    "currency": "EUR",
+    "max_per_person": 1500,
+    "prefer_cheaper": true,
+    "covers": "food, fuel, campgrounds, park fees, ferries (not flights or the car)"
+  },
+  "guided_trips": "avoid | ok | welcome",
+  "hiking": {
+    "max_sac": "T3",
+    "day_hike_max_km": 25,
+    "day_hike_max_ascent_m": 1300,
+    "max_ford": "knee",
+    "excluded_hazards": [
+      "exposure",
+      "scramble",
+      "glacier",
+      "tyrolean",
+      "packraft",
+      "ford-deep"
+    ],
+    "cross_country": "easy open terrain only",
+    "overnight_trips": {
+      "min": 0,
+      "max": 2
+    },
+    "multiday_treks": {
+      "min": 0,
+      "max": 1,
+      "max_days": 4
+    },
+    "flex_days_min": 3
+  },
+  "browser": "firefox",
+  "output_dir": "trips/YYYY-start/site",
+  "arrival_note": "How the first and last day work (flights, pickup, drop-off).",
+  "footer_note": "Made for <dates>."
+}

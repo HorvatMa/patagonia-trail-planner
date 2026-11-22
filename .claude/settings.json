@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "deny": [
+      "Edit(./GPT Hikers Manual*)",
+      "Bash(rm *GPT Hikers Manual*)",
+      "Bash(mv *GPT Hikers Manual*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/tools/check_build.py\"",
+            "timeout": 150,
+            "statusMessage": "Rebuilding trip pages..."
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/tools/save_scout_report.py\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

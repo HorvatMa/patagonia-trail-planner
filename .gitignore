@@ -1,0 +1,15 @@
+# The GPT Hikers Manual is copyrighted (Jan Dudeck) and too large for GitHub (>100 MB).
+# Download it yourself (see README) and keep it local; gpt/gpt.txt is extracted from it.
+GPT Hikers Manual*.pdf
+gpt/gpt.txt
+
+# Python
+__pycache__/
+*.pyc
+
+# Hook runtime state and logs
+gpt-reports/.hook-state.json
+gpt-reports/.hook-debug.log
+
+# Personal Claude Code overrides
+.claude/settings.local.json
