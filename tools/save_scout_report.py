@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""SubagentStop hook: save gpt-scout and hike-researcher reports to gpt-reports/ and enforce the report format.
+"""SubagentStop hook: save gpt-scout, hike-researcher and photo-scout reports to gpt-reports/ and enforce the report format.
 
 It doesn't rely on the exact SubagentStop payload schema. It looks for the report text in
 any field that might hold it (last message, agent transcript), and acts only on text whose
-first line is "GPT-SCOUT REPORT: <slug>" or "HIKE-RESEARCH REPORT: <slug>". Every other subagent is ignored.
+first line is "GPT-SCOUT REPORT: <slug>", "HIKE-RESEARCH REPORT: <slug>" or "PHOTO-SCOUT REPORT: <slug>". Every other subagent is ignored.
 The payload's top-level keys (never values) are logged to gpt-reports/.hook-debug.log, so
 you can see the real schema."""
 import datetime as dt, json, os, re, sys
@@ -11,13 +11,38 @@ import datetime as dt, json, os, re, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPORTS = os.path.join(ROOT, "gpt-reports")
 STATE = os.path.join(REPORTS, ".hook-state.json")
-MARK = re.compile(r"^\s*(GPT-SCOUT|HIKE-RESEARCH) REPORT:\s*([a-z0-9][a-z0-9-]*)\s*$", re.M)
+MARK = re.compile(r"^\s*(GPT-SCOUT|HIKE-RESEARCH|PHOTO-SCOUT) REPORT:\s*([a-z0-9][a-z0-9-]*)\s*$", re.M)
 REQUIRED = {
  "GPT-SCOUT": ({"id", "name", "kind", "verdict", "conf", "area", "ref", "dist", "gain", "time",
                 "terrain", "cost", "caution", "why", "pts", "fits"}, ("ADD", "ADD*", "MAYBE")),
  "HIKE-RESEARCH": ({"id", "name", "area", "dist", "gain", "time", "sac", "kind", "nights", "hazards",
                     "note", "pts", "verdict", "conf"}, ("ADD", "ADD*", "MAYBE")),
+ "PHOTO-SCOUT": ({"key", "verdict", "looked", "note", "photos"}, ("OK", "NONE")),
 }
+PHOTO_FIELDS = {"title", "w", "thumb", "full", "page", "shows"}
+
+def photo_problems(i, o):
+    """Extra checks for one PHOTO-SCOUT json item."""
+    sys.path.insert(0, os.path.join(ROOT, "tools"))
+    from photos import all_keys, HOSTS
+    out, ph = [], o.get("photos")
+    if o.get("key") not in all_keys():
+        out.append(f"json item {i}: key {o.get('key')!r} is not a hike id from tools/catalog.py or a place in PLACE_Q")
+    if not isinstance(ph, list):
+        return out + [f"json item {i}: photos must be a list"]
+    if o.get("verdict") == "OK" and not 1 <= len(ph) <= 3:
+        out.append(f"json item {i} ({o.get('key')}): verdict OK needs 1-3 photos, got {len(ph)}")
+    if o.get("verdict") == "NONE" and ph:
+        out.append(f"json item {i} ({o.get('key')}): verdict NONE must have an empty photos list")
+    for j, x in enumerate(ph):
+        miss = PHOTO_FIELDS - set(x)
+        if miss: out.append(f"json item {i} ({o.get('key')}) photo {j}: missing {sorted(miss)}")
+        for f in ("thumb", "full"):
+            if isinstance(x.get(f), str) and not x[f].startswith(HOSTS):
+                out.append(f"json item {i} ({o.get('key')}) photo {j}: {f} must be on upload.wikimedia.org or thumb.wikimedia.org")
+        if isinstance(x.get("page"), str) and not x["page"].startswith("https://commons.wikimedia.org/"):
+            out.append(f"json item {i} ({o.get('key')}) photo {j}: page must be on commons.wikimedia.org")
+    return out
 MAX_BLOCKS = 2
 
 def texts_from_transcript(path):
@@ -66,7 +91,7 @@ def main():
     text = reports[-1].strip()
     kind_, slug = MARK.match(text.splitlines()[0]).groups()
     required, verdicts = REQUIRED[kind_]
-    slug = ("hikes-" if kind_ == "HIKE-RESEARCH" else "") + slug
+    slug = {"HIKE-RESEARCH": "hikes-", "PHOTO-SCOUT": "photos-"}.get(kind_, "") + slug
 
     # --- format checks
     problems = []
@@ -87,8 +112,11 @@ def main():
                     if miss:
                         problems.append(f"json item {i} ({o.get('id', '?')}) is missing keys: {sorted(miss)}")
                     if o.get("verdict") not in verdicts:
-                        problems.append(f"json item {i}: verdict must be ADD, ADD* or MAYBE (NO items belong only in the prose)")
-                    if not (isinstance(o.get("pts"), list) and o["pts"] and all(isinstance(p, list) and len(p) == 2 for p in o["pts"])):
+                        problems.append(f"json item {i}: verdict must be one of {', '.join(verdicts)}"
+                                        + (" (NO items belong only in the prose)" if kind_ != "PHOTO-SCOUT" else ""))
+                    if kind_ == "PHOTO-SCOUT":
+                        problems += photo_problems(i, o)
+                    elif not (isinstance(o.get("pts"), list) and o["pts"] and all(isinstance(p, list) and len(p) == 2 for p in o["pts"])):
                         problems.append(f"json item {i}: pts must be a non-empty list of [lat, lon]")
         except json.JSONDecodeError as e:
             problems.append(f"the json block doesn't parse: {e}")

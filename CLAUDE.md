@@ -2,7 +2,7 @@
 
 This project generates static websites with alternative road-trip itineraries for Patagonia. Each **trip** has its own requirements and plans. The tools, shared hike catalogue, subagents and hooks are reused for every trip. Open a trip's `index.html` in a browser (the main trip's pages are in the project root).
 
-**Never hand-edit generated files:** `*.html`, `*.gpx`, `style.css`, `trips/*/plans_summary.txt`, `trips/*/geo/drive.json`. Edit the data and rebuild.
+**Never hand-edit generated files:** `*.html`, `*.gpx`, `style.css`, `trips/*/plans_summary.txt`, `trips/*/geo/drive.json`, `tools/geo/photos.json` (use `tools/photos.py`). Edit the data and rebuild.
 
 **To plan a new trip or change requirements, use `/plan-trip`** (`.claude/skills/plan-trip/SKILL.md`). It runs the whole pipeline with three approval checkpoints.
 
@@ -20,6 +20,7 @@ tools/catalog.py      SHARED hike catalogue: H, HP, POINT_NOTE, GRADE (SAC + kin
 tools/places.py       SHARED airports (PMC BBA PUQ PNT FTE BRC USH EQS, with planning notes) + PLACES for driving
 tools/route.py        foot routing of catalogue trails (TRAILS waypoints → tools/geo/trails.json)
 tools/drive.py        car routing per trip: python3 tools/drive.py trips/<id>/trip.json → trips/<id>/geo/drive.json
+tools/photos.py       gallery photos → tools/geo/photos.json: keyword search (HIKE_Q / PLACE_Q / SKIP), `--apply <photo-scout report.json> [keys]` (pins keys), `--check`
 tools/new_trip.py     python3 tools/new_trip.py <id> → copies trips/_template/
 tools/geocode.py, geob.py   Nominatim lookups (geob = bounded box)
 tools/check_build.py, save_scout_report.py   hook scripts
@@ -60,8 +61,9 @@ GPT Hikers Manual (20251015).pdf   the user's file. Read only; never modify, mov
 ## Build and hooks (active when Claude Code is started in this folder)
 - **PostToolUse (Write|Edit)** on `tools/*.py`, `trips/**/*.py` or `trips/**/trip.json`: rebuilds every trip and validates the pages and GPX files.
   - A build failure or broken output blocks, and the error comes back to Claude.
-  - Requirement problems come back as context.
-- **SubagentStop:** saves `GPT-SCOUT REPORT:` and `HIKE-RESEARCH REPORT:` messages to `gpt-reports/<date>-…md/.json`, and sends badly formatted reports back (at most twice). It logs the payload key names to `gpt-reports/.hook-debug.log`.
+  - Requirement problems come back as context, plus a `photos:` line naming planned hikes/places without gallery photos.
+- **PostToolUse (Bash)** when the command runs `tools/photos.py`: validates `tools/geo/photos.json` (blocks if broken) and rebuilds.
+- **SubagentStop:** saves `GPT-SCOUT REPORT:`, `HIKE-RESEARCH REPORT:` and `PHOTO-SCOUT REPORT:` messages to `gpt-reports/<date>-…md/.json`, and sends badly formatted reports back (at most twice). It logs the payload key names to `gpt-reports/.hook-debug.log`.
 - **Deny rules** protect the GPT manual.
 
 ## Subagents (`.claude/agents/`)
@@ -73,6 +75,7 @@ GPT Hikers Manual (20251015).pdf   the user's file. Read only; never modify, mov
 | gpt-integrator | only `trips/<id>/gpt_opts.py` + `tools/geo/gpt_trails.json` | Merge approved GPT options |
 | conditions-checker | no (web) | Day-by-day current rules, fees, closures for one plan, before departure |
 | page-qa | no | Headless Firefox/Chrome checks of the pages |
+| photo-scout | no | Finds Commons photos for hike ids / overnight places, looks at each thumbnail, returns a PHOTO-SCOUT REPORT; merge with `tools/photos.py --apply` |
 
 Always give agents the **trip id**. Run independent regions in parallel with one narrow area each, and get the user's approval before anything is merged into the catalogue or the plans.
 

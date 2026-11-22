@@ -1,0 +1,114 @@
+# Photo Scout report: photos-calafate-paine
+
+*Saved automatically by the SubagentStop hook on 2026-11-22.*
+
+PHOTO-SCOUT REPORT: calafate-paine
+Date check: today is 2026-11-22.
+
+| key | verdict | kept | looked at | note |
+|---|---|---|---|---|
+| pmoreno | OK | 3 | 10 | glacier front from the walkways, walkway, pavilion/balcony |
+| cuevamanos | OK | 3 | 10 | hand paintings only. No canyon view turned up in the 10 looked at. |
+| base_torres | OK | 3 | 13 | the Laguna Azul shots were rejected (towers too distant). Kept views of the lake below the towers. |
+| cuernos | OK | 3 | 15 | Salto Grande with Paine peaks behind, plus the Cuernos above the lake. No Mirador Cuernos photo found, so the third photo is a lake view of the Cuernos. |
+| grey | OK | 3 | 15 | glacier front and icebergs. No beach or peninsula photo without people was found. |
+
+Caveats:
+- I looked at the thumbnails on contact sheets (up to 10 per sheet), not one by one.
+- Titles were checked against "El Calafate", "Torres del Paine" and "Bajo Caracoles" in photos.json by eye only, not by script. The "Torres del Paine" key has "Cuernos del Paine in Torres del Paine National Park.jpg". None of my titles are that one.
+- The pending build error in the hook output (plan-2/4 GPX, plan-3 HTML) is from other agents' concurrent builds. I did not touch the project.
+
+```json
+[
+ {"key": "pmoreno", "verdict": "OK", "looked": 10, "note": "glacier front from the walkways, walkway, pavilion/balcony",
+  "photos": [
+   {"title": "File:Perito Moreno Glacier panorama.jpg", "w": 10320,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Perito_Moreno_Glacier_panorama.jpg/960px-Perito_Moreno_Glacier_panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Perito_Moreno_Glacier_panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Perito_Moreno_Glacier_panorama.jpg",
+    "shows": "Perito Moreno glacier front across the lake from the walkways"},
+   {"title": "File:Perito Moreno Glacier walkway 1.JPG", "w": 4032,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Perito_Moreno_Glacier_walkway_1.JPG/960px-Perito_Moreno_Glacier_walkway_1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/0/02/Perito_Moreno_Glacier_walkway_1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Perito_Moreno_Glacier_walkway_1.JPG",
+    "shows": "metal walkway with the glacier and lake beyond"},
+   {"title": "File:Walkways close to Perito Moreno Glacier.jpg", "w": 960,
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Walkways_close_to_Perito_Moreno_Glacier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Walkways_close_to_Perito_Moreno_Glacier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Walkways_close_to_Perito_Moreno_Glacier.jpg",
+    "shows": "viewing pavilion and balcony walkways above the glacier"}
+  ]},
+ {"key": "cuevamanos", "verdict": "OK", "looked": 10, "note": "hand paintings; no canyon view found among 10 looked",
+  "photos": [
+   {"title": "File:Cueva de las Manos Argentina - panoramio (7).jpg", "w": 2400,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Cueva_de_las_Manos_Argentina_-_panoramio_%287%29.jpg/960px-Cueva_de_las_Manos_Argentina_-_panoramio_%287%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Cueva_de_las_Manos_Argentina_-_panoramio_%287%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Cueva_de_las_Manos_Argentina_-_panoramio_(7).jpg",
+    "shows": "painted rock wall with large hand stencil and red circle under the overhang"},
+   {"title": "File:Cueva de las Manos Argentina - panoramio (6).jpg", "w": 2400,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Cueva_de_las_Manos_Argentina_-_panoramio_%286%29.jpg/960px-Cueva_de_las_Manos_Argentina_-_panoramio_%286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Cueva_de_las_Manos_Argentina_-_panoramio_%286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Cueva_de_las_Manos_Argentina_-_panoramio_(6).jpg",
+    "shows": "the rock-shelter cave wall covered in hand stencils"},
+   {"title": "File:Cueva de las Manos-Santa Cruz-Argentina.JPG", "w": 2816,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Cueva_de_las_Manos-Santa_Cruz-Argentina.JPG/960px-Cueva_de_las_Manos-Santa_Cruz-Argentina.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/3/36/Cueva_de_las_Manos-Santa_Cruz-Argentina.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Cueva_de_las_Manos-Santa_Cruz-Argentina.JPG",
+    "shows": "close view of the hand paintings"}
+  ]},
+ {"key": "base_torres", "verdict": "OK", "looked": 13, "note": "Laguna Azul shots rejected (distant); kept lake-below-towers views",
+  "photos": [
+   {"title": "File:Torres del Paine (2051943559).jpg", "w": 1536,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Torres_del_Paine_%282051943559%29.jpg/960px-Torres_del_Paine_%282051943559%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Torres_del_Paine_%282051943559%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Torres_del_Paine_(2051943559).jpg",
+    "shows": "the three towers above the moraine lake"},
+   {"title": "File:Mirador Base Torres del Paine.jpg", "w": 3367,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Mirador_Base_Torres_del_Paine.jpg/960px-Mirador_Base_Torres_del_Paine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Mirador_Base_Torres_del_Paine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Mirador_Base_Torres_del_Paine.jpg",
+    "shows": "turquoise moraine lake below the misty towers"},
+   {"title": "File:Cordillera Paine; vista desde el mirador Base de las Torres, Parque nacional Torres del Paine, Chile.jpg", "w": 4896,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Cordillera_Paine%3B_vista_desde_el_mirador_Base_de_las_Torres%2C_Parque_nacional_Torres_del_Paine%2C_Chile.jpg/960px-Cordillera_Paine%3B_vista_desde_el_mirador_Base_de_las_Torres%2C_Parque_nacional_Torres_del_Paine%2C_Chile.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Cordillera_Paine%3B_vista_desde_el_mirador_Base_de_las_Torres%2C_Parque_nacional_Torres_del_Paine%2C_Chile.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Cordillera_Paine;_vista_desde_el_mirador_Base_de_las_Torres,_Parque_nacional_Torres_del_Paine,_Chile.jpg",
+    "shows": "view from Mirador Base de las Torres over the lake"}
+  ]},
+ {"key": "cuernos", "verdict": "OK", "looked": 15, "note": "Salto Grande with Cuernos behind; Cuernos lake view",
+  "photos": [
+   {"title": "File:Mirador Salto Grande - Torres del Paine National Park 38.jpg", "w": 5530,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Mirador_Salto_Grande_-_Torres_del_Paine_National_Park_38.jpg/960px-Mirador_Salto_Grande_-_Torres_del_Paine_National_Park_38.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/1/19/Mirador_Salto_Grande_-_Torres_del_Paine_National_Park_38.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Mirador_Salto_Grande_-_Torres_del_Paine_National_Park_38.jpg",
+    "shows": "Salto Grande waterfall with Paine peaks behind"},
+   {"title": "File:Mirador Salto Grande - Torres del Paine National Park 39.jpg", "w": 5760,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Mirador_Salto_Grande_-_Torres_del_Paine_National_Park_39.jpg/960px-Mirador_Salto_Grande_-_Torres_del_Paine_National_Park_39.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/1/16/Mirador_Salto_Grande_-_Torres_del_Paine_National_Park_39.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Mirador_Salto_Grande_-_Torres_del_Paine_National_Park_39.jpg",
+    "shows": "Salto Grande rapids with the Cuernos in cloud behind"},
+   {"title": "File:El sol entre los Cuernos del Paine.jpg", "w": 6000,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/El_sol_entre_los_Cuernos_del_Paine.jpg/960px-El_sol_entre_los_Cuernos_del_Paine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/f/f9/El_sol_entre_los_Cuernos_del_Paine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:El_sol_entre_los_Cuernos_del_Paine.jpg",
+    "shows": "Cuernos del Paine above the lake at sunrise"}
+  ]},
+ {"key": "grey", "verdict": "OK", "looked": 15, "note": "glacier front and icebergs",
+  "photos": [
+   {"title": "File:Torres del Paine - Grey Glacier - panoramio.jpg", "w": 3838,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Torres_del_Paine_-_Grey_Glacier_-_panoramio.jpg/960px-Torres_del_Paine_-_Grey_Glacier_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/3/31/Torres_del_Paine_-_Grey_Glacier_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Torres_del_Paine_-_Grey_Glacier_-_panoramio.jpg",
+    "shows": "Grey glacier front across the lake"},
+   {"title": "File:Glaciar Grey, Parque Nacional Torres del Paine, Chile4.jpg", "w": 3888,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Glaciar_Grey%2C_Parque_Nacional_Torres_del_Paine%2C_Chile4.jpg/960px-Glaciar_Grey%2C_Parque_Nacional_Torres_del_Paine%2C_Chile4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/0/07/Glaciar_Grey%2C_Parque_Nacional_Torres_del_Paine%2C_Chile4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Glaciar_Grey,_Parque_Nacional_Torres_del_Paine,_Chile4.jpg",
+    "shows": "icebergs in Lago Grey with the glacier in the distance"},
+   {"title": "File:Glaciar Grey, Parque Nacional Torres del Paine, Chile1.jpg", "w": 3888,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Glaciar_Grey%2C_Parque_Nacional_Torres_del_Paine%2C_Chile1.jpg/960px-Glaciar_Grey%2C_Parque_Nacional_Torres_del_Paine%2C_Chile1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Glaciar_Grey%2C_Parque_Nacional_Torres_del_Paine%2C_Chile1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Glaciar_Grey,_Parque_Nacional_Torres_del_Paine,_Chile1.jpg",
+    "shows": "large blue iceberg with Paine peaks behind"}
+  ]}
+]
+```

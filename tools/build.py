@@ -17,6 +17,7 @@ from catalog import H, HP, POINT_NOTE, GRADE  # noqa: E402
 
 TRAILS = json.load(open(GEO + "trails.json"))
 GPT_TRAILS = json.load(open(GEO + "gpt_trails.json"))
+PHOTOS = json.load(open(GEO + "photos.json")) if os.path.exists(GEO + "photos.json") else {}  # from tools/photos.py
 
 # per-trip globals, set by load_trip()
 TRIP = PLANS = BUDGET = SLEEP = DRIVE = GPT_OPTS = INDEX = START = OUT = REPORTS_REL = None
@@ -57,7 +58,7 @@ def default_index():
 <p class="lede">{html.escape(t.get('lede', ''))}</p></header>
 <div class="plancards">{{CARDS}}</div>
 <h2>Side by side</h2>
-<div class="tscroll"><table><thead><tr><th>Plan</th><th>Hike days</th><th>Flex days</th><th>Driving days</th><th>Driving km</th><th>Overnight spots</th><th>Argentina</th><th>Budget</th><th>Checks</th></tr></thead><tbody>{{ROWS}}</tbody></table></div>
+<div class="tscroll"><table><thead><tr><th>Plan</th><th>Hike days</th><th>Flex days</th><th>Driving days</th><th>Hiking km</th><th>Hiking ascent</th><th>Driving km</th><th>Overnight spots</th><th>Argentina</th><th>Budget</th><th>Checks</th></tr></thead><tbody>{{ROWS}}</tbody></table></div>
 """)
 
 # ---------------------------------------------------------------- requirement checks
@@ -81,6 +82,13 @@ def hike_km(h):
 
 def hike_gain(h):
     return _nums(H[h][3], "m")
+
+def hike_totals(p):
+    """Combined distance (km) and ascent (m) of all hikes in a plan. Each hike counts once (a multi-day trek
+    spans several days); activities (boat trips, viewpoints) are left out. Ranges count at their upper end."""
+    used = plan_counts(p)[0]
+    hikes = [h for h in used if GRADE[h]["kind"] != "activity"]
+    return round(sum(hike_km(h) or 0 for h in hikes)), round(sum(hike_gain(h) or 0 for h in hikes))
 
 def plan_counts(p):
     used = []
@@ -436,6 +444,20 @@ body.show-gpt .gpt-only{display:block}
 .gptwarn{background:var(--warn-soft);border-radius:6px;padding:6px 8px}
 .gptpin{color:#7c3aed;font-size:20px;line-height:20px;text-align:center;text-shadow:0 0 3px #fff,0 0 3px #fff}
 footer{margin-top:48px;font-size:13px;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.gitem{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:0}
+.gitem button{all:unset;cursor:zoom-in;display:block}
+.gitem .main img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--chip)}
+.gitem .thumbs{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2px}
+.gitem .thumbs img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--chip)}
+.gitem figcaption{padding:8px 12px 10px;font-size:14px}
+.gitem figcaption small{display:block;color:var(--muted);font-size:12px}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;z-index:2000;align-items:center;justify-content:center;flex-direction:column}
+.lb.open{display:flex}
+.lb img{max-width:94vw;max-height:84vh;object-fit:contain}
+.lb .cap{color:#eee;font-size:15px;margin-top:10px;text-align:center;padding:0 16px}
+.lb button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;border-radius:999px;width:44px;height:44px;font-size:24px;cursor:pointer}
+.lb .x{top:14px;right:14px}.lb .prev{left:10px;top:50%}.lb .next{right:10px;top:50%}
 """
 
 def esc(s): return html.escape(s, quote=True)
@@ -523,8 +545,57 @@ def sleep_html(p):
     return f"""<h2>Sleeping in the car on this route</h2><div class="card"><ul class="clean">{li}</ul>
 <p style="font-size:14px;color:var(--muted);margin:10px 0 0">Between these places, <b>iOverlander</b> lists free and cheap spots. Most land along the Carretera is private and fenced, so ask before you park. Wild camping inside national parks is not allowed.</p></div>"""
 
+def gallery_items(p):
+    """Photo groups in day order: each hike when it first appears, and each overnight place the first night there."""
+    sys.path.insert(0, HERE)
+    from photos import place_for
+    items, seen = [], set()
+    for i, d in enumerate(p["days"]):
+        date = date_of(i)[0]
+        for h in d[2]:
+            if h not in seen and PHOTOS.get(h):
+                seen.add(h); items.append((date, H[h][0].split(":")[0], H[h][1], PHOTOS[h], f"#h-{h}"))
+        pl = place_for(d[4])
+        if pl and pl not in seen and PHOTOS.get(pl):
+            seen.add(pl); items.append((date, pl, "Overnight: " + d[4], PHOTOS[pl], None))
+    return items
+
+def gallery_html(p):
+    items = gallery_items(p)
+    if not items: return ""
+    figs, n = [], 0
+    for date, name, sub, photos, link in items:
+        cap = f"{date} · {name}"
+        def img(ph, cls):
+            nonlocal n
+            n += 1
+            return (f'<button type="button" data-i="{n - 1}" data-full="{esc(ph["full"])}" data-cap="{esc(cap + (" — " + ph["shows"] if ph.get("shows") else ""))}" aria-label="Enlarge photo: {esc(name)}">'
+                    f'<img src="{esc(ph["thumb"])}" alt="{esc(name)}" loading="lazy" referrerpolicy="no-referrer"></button>')
+        main = img(photos[0], "main")
+        thumbs = "".join(img(ph, "t") for ph in photos[1:3])
+        title = f'<a href="{link}">{esc(name)}</a>' if link else esc(name)
+        figs.append(f'<figure class="gitem"><div class="main">{main}</div>{f"<div class=thumbs>{thumbs}</div>" if thumbs else ""}'
+                    f'<figcaption><b>{esc(date)}</b> · {title}<small>{esc(sub)}</small></figcaption></figure>')
+    return f"""<h2 id="gallery">What it looks like</h2>
+<p style="color:var(--muted);font-size:14px;margin-top:0">Photos of the hikes and overnight stops, in the order you reach them. Click a photo to enlarge it; use ← → to browse. The photos come from Wikimedia Commons and load from the internet.</p>
+<div class="gallery">{''.join(figs)}</div>
+<div class="lb" role="dialog" aria-modal="true" aria-label="Photo viewer"><button class="x" type="button" aria-label="Close">×</button><button class="prev" type="button" aria-label="Previous">‹</button><img alt=""><div class="cap"></div><button class="next" type="button" aria-label="Next">›</button></div>"""
+
+GALLERY_JS = """<script>(function(){
+const bs=[...document.querySelectorAll('.gallery button[data-i]')], lb=document.querySelector('.lb'); if(!lb) return;
+const im=lb.querySelector('img'), cap=lb.querySelector('.cap'); let cur=0;
+function show(i){cur=(i+bs.length)%bs.length; const b=bs[cur]; im.src=b.dataset.full; cap.textContent=b.dataset.cap+'  ('+(cur+1)+' / '+bs.length+')'; lb.classList.add('open');}
+function close(){lb.classList.remove('open'); im.removeAttribute('src'); bs[cur].focus();}
+bs.forEach(b=>b.addEventListener('click',()=>show(+b.dataset.i)));
+im.referrerPolicy='no-referrer';
+lb.querySelector('.x').onclick=close; lb.querySelector('.prev').onclick=()=>show(cur-1); lb.querySelector('.next').onclick=()=>show(cur+1);
+lb.addEventListener('click',e=>{if(e.target===lb) close();});
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('open')) return; if(e.key==='Escape') close(); else if(e.key==='ArrowLeft') show(cur-1); else if(e.key==='ArrowRight') show(cur+1);});
+})();</script>"""
+
 def plan_page(p):
     big, buf, travel, bases = stats(p)
+    hkm, hgain = hike_totals(p)
     days_html = []
     galt = {}
     for g in gpt_for(p):
@@ -549,6 +620,8 @@ def plan_page(p):
 <div class="stat"><b>{big}</b><span>days with a proper hike</span></div>
 <div class="stat"><b>{buf}</b><span>flex / weather days</span></div>
 <div class="stat"><b>{travel}</b><span>mainly driving days</span></div>
+<div class="stat"><b>≈{hkm:,} km</b><span>hiking in total</span></div>
+<div class="stat"><b>≈{hgain:,} m</b><span>total ascent on hikes</span></div>
 <div class="stat"><b>{p['km']} km</b><span>total driving</span></div>
 <div class="stat"><b>{bases}</b><span>different overnight spots</span></div>
 <div class="stat"><b>{"Yes" if p["argentina"] else "No"}</b><span>crosses into Argentina</span></div>
@@ -562,6 +635,7 @@ def plan_page(p):
 <div class="grid2" style="margin-top:14px"><div class="card"><h3>Why choose it</h3><ul class="clean">{''.join(f'<li>{esc(x)}</li>' for x in p['pros'])}</ul></div>
 <div class="card"><h3>Trade-offs</h3><ul class="clean">{''.join(f'<li>{esc(x)}</li>' for x in p['cons'])}</ul></div></div>
 {map_html(p)}
+{gallery_html(p)}
 {gpt_section(p)}
 {budget_html(p)}
 {sleep_html(p)}
@@ -573,7 +647,7 @@ def plan_page(p):
 <div class="hikes">{''.join(hike_card(h) for h in seen)}</div>
 <p style="margin-top:28px"><a href="index.html">← Back to the overview, general safety tips and the comparison of all plans</a></p>"""
     head = '<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">'
-    tail = TOGGLE_JS + '<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script><script>' + MAP_JS + '</script>'
+    tail = TOGGLE_JS + '<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script><script>' + MAP_JS + '</script>' + GALLERY_JS
     return page(f"Patagonia: {p['name']}", body, p["tag"], head, tail)
 
 def index_page():
@@ -581,7 +655,8 @@ def index_page():
     cards = []
     for p in PLANS:
         big, buf, travel, bases = stats(p)
-        rows.append(f"<tr><td><a href='{p['slug']}.html'><b>{p['num']}. {esc(p['name'])}</b></a></td><td>{big}</td><td>{buf}</td><td>{travel}</td><td>{p['km']}</td><td>{bases}</td><td>{'Yes' if p['argentina'] else 'No'}</td><td>≈€{per_person(budget_total(p['num']))} pp<br><small class=muted>≈€{budget_total(p['num'])} {'for both' if PEOPLE == 2 else 'in total'}</small></td><td>{check_cell(p)}</td></tr>")
+        hkm, hgain = hike_totals(p)
+        rows.append(f"<tr><td><a href='{p['slug']}.html'><b>{p['num']}. {esc(p['name'])}</b></a></td><td>{big}</td><td>{buf}</td><td>{travel}</td><td>≈{hkm:,}</td><td>≈{hgain:,} m</td><td>{p['km']}</td><td>{bases}</td><td>{'Yes' if p['argentina'] else 'No'}</td><td>≈€{per_person(budget_total(p['num']))} pp<br><small class=muted>≈€{budget_total(p['num'])} {'for both' if PEOPLE == 2 else 'in total'}</small></td><td>{check_cell(p)}</td></tr>")
         cards.append(f"""<div class="card plancard"><div class="num">Plan {p['num']}{' · 🇦🇷 crosses into Argentina' if p['argentina'] else ' · Chile only'}</div><h3 style="font-size:20px">{esc(p['name'])}</h3>
 <p>{esc(p['tag'])}</p><p style="color:var(--muted);font-size:14px"><b>Best for:</b> {esc(p['who'])}</p><div class="spacer"></div><a class="btn" href="{p['slug']}.html">Open plan {p['num']} →</a></div>""")
     body = f"""{nav('index.html')}
@@ -621,10 +696,19 @@ def build_trip(trip_json):
     print(f"[{TRIP['id']}] → {os.path.relpath(OUT, ROOT) or '.'}")
     for p in PLANS:
         issues = validate_plan(p)
-        print(" ", p["num"], p["name"], stats(p), "requirements OK" if not issues else "")
+        print(" ", p["num"], p["name"], stats(p), "hiking ≈%d km / ≈%d m" % hike_totals(p), "requirements OK" if not issues else "")
         for lv, msg in issues:
             print(f"      {'ERROR' if lv == 'error' else 'warn '}: {msg}")
     open(os.path.join(TRIP["_dir"], "plans_summary.txt"), "w").write(plans_summary())
+    from photos import place_for
+    need = []
+    for p in PLANS:
+        for d in p["days"]:
+            for k in d[2] + [place_for(d[4])]:
+                if k and k not in need: need.append(k)
+    nophoto = [k for k in need if not PHOTOS.get(k) and k not in PHOTOS.get("_pinned", {})]
+    if nophoto:
+        print(f"  photos: no gallery photos for {', '.join(nophoto)} (run the photo-scout agent, then tools/photos.py --apply)")
 
 def all_trips():
     return sorted(t for t in glob.glob(os.path.join(ROOT, "trips", "*", "trip.json")) if not os.path.basename(os.path.dirname(t)).startswith("_"))

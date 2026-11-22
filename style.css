@@ -97,3 +97,17 @@ body.show-gpt .gpt-only{display:block}
 .gptwarn{background:var(--warn-soft);border-radius:6px;padding:6px 8px}
 .gptpin{color:#7c3aed;font-size:20px;line-height:20px;text-align:center;text-shadow:0 0 3px #fff,0 0 3px #fff}
 footer{margin-top:48px;font-size:13px;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.gitem{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:0}
+.gitem button{all:unset;cursor:zoom-in;display:block}
+.gitem .main img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--chip)}
+.gitem .thumbs{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2px}
+.gitem .thumbs img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--chip)}
+.gitem figcaption{padding:8px 12px 10px;font-size:14px}
+.gitem figcaption small{display:block;color:var(--muted);font-size:12px}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;z-index:2000;align-items:center;justify-content:center;flex-direction:column}
+.lb.open{display:flex}
+.lb img{max-width:94vw;max-height:84vh;object-fit:contain}
+.lb .cap{color:#eee;font-size:15px;margin-top:10px;text-align:center;padding:0 16px}
+.lb button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;border-radius:999px;width:44px;height:44px;font-size:24px;cursor:pointer}
+.lb .x{top:14px;right:14px}.lb .prev{left:10px;top:50%}.lb .next{right:10px;top:50%}

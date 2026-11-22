@@ -1,0 +1,115 @@
+# Photo Scout report: photos-chalten
+
+*Saved automatically by the SubagentStop hook on 2026-11-22.*
+
+PHOTO-SCOUT REPORT: chalten
+Date check: today is 2026-11-22.
+
+| key | verdict | kept | looked at | note |
+|---|---|---|---|---|
+| toro | NONE | 0 | 2 | Searches returned only Perito Moreno glacier; no Laguna Toro or Glaciar Túnel photos |
+| torre | OK | 3 | 8 | Lake with Cerro Torre |
+| tres | OK | 3 | 6 | The third photo is Laguna Sucia, just beyond Los Tres, with Fitz Roy; drop it if you want strictness |
+| pliegue | OK | 3 | 6 | Trail and ridge viewpoint photos, Torre-valley side; the third shows only Fitz Roy |
+| capri | OK | 3 | 9 | Small lake with Fitz Roy behind |
+| desierto | OK | 3 | 8 | Long lake with Fitz Roy, and Glaciar Huemul; no good Chorrillo del Salto waterfall photo (the Salto del Chorrillo results were the El Chaltén trail, not a clear waterfall) |
+
+Notes:
+- The "Laguna Sucia Fitz Roy" query was rate-limited (HTTP 429), so I had to rely on the other queries. I used no photos from the El Chaltén place key.
+- The `thumb` and `full` URLs are copied from `search()`. Their `full` URLs are the original-size files (upload.wikimedia.org).
+
+```json
+[
+ {"key": "toro", "verdict": "NONE", "looked": 2, "note": "only Perito Moreno glacier results; no Laguna Toro/Glaciar Tunel photos", "photos": []},
+ {"key": "torre", "verdict": "OK", "looked": 8, "note": "lake with Cerro Torre",
+  "photos": [
+   {"title": "File:Laguna Torre - El Chaltén.jpg", "w": 3264,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Laguna_Torre_-_El_Chalt%C3%A9n.jpg/960px-Laguna_Torre_-_El_Chalt%C3%A9n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/d/da/Laguna_Torre_-_El_Chalt%C3%A9n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Laguna_Torre_-_El_Chalt%C3%A9n.jpg",
+    "shows": "Laguna Torre with icebergs and Cerro Torre"},
+   {"title": "File:Cerro Torre (east face) and Laguna Torre.JPG", "w": 2736,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Cerro_Torre_%28east_face%29_and_Laguna_Torre.JPG/960px-Cerro_Torre_%28east_face%29_and_Laguna_Torre.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Cerro_Torre_%28east_face%29_and_Laguna_Torre.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Cerro_Torre_(east_face)_and_Laguna_Torre.JPG",
+    "shows": "Cerro Torre east face above Laguna Torre with icebergs"},
+   {"title": "File:Laguna Torre, El Chalten, Argentina.JPG", "w": 4928,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Laguna_Torre%2C_El_Chalten%2C_Argentina.JPG/960px-Laguna_Torre%2C_El_Chalten%2C_Argentina.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Laguna_Torre%2C_El_Chalten%2C_Argentina.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Laguna_Torre,_El_Chalten,_Argentina.JPG",
+    "shows": "Laguna Torre icebergs, Cerro Torre and glacier"}
+  ]},
+ {"key": "tres", "verdict": "OK", "looked": 6, "note": "third photo is Laguna Sucia just beyond Los Tres",
+  "photos": [
+   {"title": "File:Laguna de Los Tres Panorama.jpg", "w": 2559,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Laguna_de_Los_Tres_Panorama.jpg/960px-Laguna_de_Los_Tres_Panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Laguna_de_Los_Tres_Panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Laguna_de_Los_Tres_Panorama.jpg",
+    "shows": "turquoise Laguna de los Tres right under Fitz Roy"},
+   {"title": "File:Laguna de los Tres.jpg", "w": 3100,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Laguna_de_los_Tres.jpg/960px-Laguna_de_los_Tres.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Laguna_de_los_Tres.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Laguna_de_los_Tres.jpg",
+    "shows": "Laguna de los Tres below Fitz Roy and glacier"},
+   {"title": "File:Fitz Roy and Laguna Sucia.jpg", "w": 6890,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Fitz_Roy_and_Laguna_Sucia.jpg/960px-Fitz_Roy_and_Laguna_Sucia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/9/93/Fitz_Roy_and_Laguna_Sucia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Fitz_Roy_and_Laguna_Sucia.jpg",
+    "shows": "Laguna Sucia beyond Los Tres with Fitz Roy"}
+  ]},
+ {"key": "pliegue", "verdict": "OK", "looked": 6, "note": "viewpoint photos from the trail/summit ridge; Cerro Torre side",
+  "photos": [
+   {"title": "File:View of laguna and peaks rail to Loma del Pliegue Tumbado Parque Nacional Los Glaciares El Chalten Argentina.jpg", "w": 4096,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/View_of_laguna_and_peaks_rail_to_Loma_del_Pliegue_Tumbado_Parque_Nacional_Los_Glaciares_El_Chalten_Argentina.jpg/960px-View_of_laguna_and_peaks_rail_to_Loma_del_Pliegue_Tumbado_Parque_Nacional_Los_Glaciares_El_Chalten_Argentina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/0/08/View_of_laguna_and_peaks_rail_to_Loma_del_Pliegue_Tumbado_Parque_Nacional_Los_Glaciares_El_Chalten_Argentina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:View_of_laguna_and_peaks_rail_to_Loma_del_Pliegue_Tumbado_Parque_Nacional_Los_Glaciares_El_Chalten_Argentina.jpg",
+    "shows": "view from the Loma over Laguna Torre valley with Cerro Torre"},
+   {"title": "File:Cerro and Fitzroy rail to Loma del Pliegue Tumbado Parque Nacional Los Glaciares El Chalten Argentina.jpg", "w": 5184,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Cerro_and_Fitzroy_rail_to_Loma_del_Pliegue_Tumbado_Parque_Nacional_Los_Glaciares_El_Chalten_Argentina.jpg/960px-Cerro_and_Fitzroy_rail_to_Loma_del_Pliegue_Tumbado_Parque_Nacional_Los_Glaciares_El_Chalten_Argentina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Cerro_and_Fitzroy_rail_to_Loma_del_Pliegue_Tumbado_Parque_Nacional_Los_Glaciares_El_Chalten_Argentina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Cerro_and_Fitzroy_rail_to_Loma_del_Pliegue_Tumbado_Parque_Nacional_Los_Glaciares_El_Chalten_Argentina.jpg",
+    "shows": "high view down the Torre valley with Cerro Torre and cloud"},
+   {"title": "File:Fitzroy Peak rail to Loma del Pliegue Tumbado Parque Nacional Los Glaciares El Chalten Argentina.jpg", "w": 3823,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Fitzroy_Peak_rail_to_Loma_del_Pliegue_Tumbado_Parque_Nacional_Los_Glaciares_El_Chalten_Argentina.jpg/960px-Fitzroy_Peak_rail_to_Loma_del_Pliegue_Tumbado_Parque_Nacional_Los_Glaciares_El_Chalten_Argentina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/2/23/Fitzroy_Peak_rail_to_Loma_del_Pliegue_Tumbado_Parque_Nacional_Los_Glaciares_El_Chalten_Argentina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Fitzroy_Peak_rail_to_Loma_del_Pliegue_Tumbado_Parque_Nacional_Los_Glaciares_El_Chalten_Argentina.jpg",
+    "shows": "Fitz Roy seen from the stony Loma ridge"}
+  ]},
+ {"key": "capri", "verdict": "OK", "looked": 9, "note": "small lake with Fitz Roy",
+  "photos": [
+   {"title": "File:Fitz Roy y laguna Capri.JPG", "w": 1595,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Fitz_Roy_y_laguna_Capri.JPG/960px-Fitz_Roy_y_laguna_Capri.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Fitz_Roy_y_laguna_Capri.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Fitz_Roy_y_laguna_Capri.JPG",
+    "shows": "Laguna Capri with Fitz Roy behind"},
+   {"title": "File:Fitz Roy group - Laguna Capri - 01.JPG", "w": 3648,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Fitz_Roy_group_-_Laguna_Capri_-_01.JPG/960px-Fitz_Roy_group_-_Laguna_Capri_-_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Fitz_Roy_group_-_Laguna_Capri_-_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Fitz_Roy_group_-_Laguna_Capri_-_01.JPG",
+    "shows": "Laguna Capri with Fitz Roy massif in evening light"},
+   {"title": "File:Fitz Roy and reflect in Laguna Capri (sunrise).JPG", "w": 2736,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Fitz_Roy_and_reflect_in_Laguna_Capri_%28sunrise%29.JPG/960px-Fitz_Roy_and_reflect_in_Laguna_Capri_%28sunrise%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Fitz_Roy_and_reflect_in_Laguna_Capri_%28sunrise%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Fitz_Roy_and_reflect_in_Laguna_Capri_(sunrise).JPG",
+    "shows": "Fitz Roy at sunrise reflected in Laguna Capri"}
+  ]},
+ {"key": "desierto", "verdict": "OK", "looked": 8, "note": "long lake with Fitz Roy, Huemul glacier; no good Chorrillo del Salto waterfall photo",
+  "photos": [
+   {"title": "File:Lago del Desierto .jpg", "w": 2200,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Lago_del_Desierto_.jpg/960px-Lago_del_Desierto_.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Lago_del_Desierto_.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Lago_del_Desierto_.jpg",
+    "shows": "Lago del Desierto with ferry boat and Fitz Roy"},
+   {"title": "File:Laguna del Desierto (1).jpg", "w": 5344,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Laguna_del_Desierto_%281%29.jpg/960px-Laguna_del_Desierto_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/2/23/Laguna_del_Desierto_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Laguna_del_Desierto_(1).jpg",
+    "shows": "Lago del Desierto with Fitz Roy at the far end"},
+   {"title": "File:Glaciar Huemul.jpg", "w": 5344,
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Glaciar_Huemul.jpg/960px-Glaciar_Huemul.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "full": "https://upload.wikimedia.org/wikipedia/commons/2/27/Glaciar_Huemul.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "page": "https://commons.wikimedia.org/wiki/File:Glaciar_Huemul.jpg",
+    "shows": "Glaciar Huemul above its lake"}
+  ]}
+]
+```
